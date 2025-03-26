@@ -359,11 +359,11 @@ def registerdataintern(request):
         save3 = user_detail(user_id=user_id, name=form.cleaned_data['student_Name'])
         save2.save()
         save3.save()
-        messages.success(request, "Successfully registered and email sent.")
+        messages.success(request, "Successfully regis     tered and email sent.")
         return redirect(reverse('altruisty:payment', kwargs={'id': user_id}))
     else:
-        form = InternRegistrationForm()
-        return render(request, 'internship.html', {'form': form})
+        # form = InternRegistrationForm()
+        return render(request, 'internship.html')
 
 import qrcode
 from io import BytesIO

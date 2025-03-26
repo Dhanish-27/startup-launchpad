@@ -293,79 +293,79 @@ class PaymentForm(forms.ModelForm):
         }
 
     
-def getdomainchoices():
-    options = [(None,'Select')]
-    entry = intern_domain.objects.all()
-    for dta in entry :
-        options.append((dta.name,dta.name))
-    return options
+# def getdomainchoices():
+#     options = [(None,'Select')]
+#     entry = intern_domain.objects.all()
+#     for dta in entry :
+#         options.append((dta.name,dta.name))
+#     return options
 
-class InternRegistrationForm(forms.ModelForm):
-    # Fields with choices
-    domain_choices = intern_domain.objects.values_list('name', flat=True).distinct()
-    domain = forms.ChoiceField(
-        choices=getdomainchoices(),  # Convert to tuple format
-        widget=forms.Select(attrs={'class': 'form-control'}),
-    )
+# class InternRegistrationForm(forms.ModelForm):
+#     # Fields with choices
+#     domain_choices = intern_domain.objects.values_list('name', flat=True).distinct()
+#     domain = forms.ChoiceField(
+#         choices=[('choice','choice')],  # Convert to tuple format
+#         widget=forms.Select(attrs={'class': 'form-control'}),
+#     )
 
-    duration = forms.ChoiceField(
-        choices=[('1 month', '1 Month'), ('2 month', '2 Months'),
-                 ('3 month', '3 Months'), ('6 month', '6 Months')],
-        widget=forms.Select(attrs={'class': 'form-control'})
-    )
+#     duration = forms.ChoiceField(
+#         choices=[('1 month', '1 Month'), ('2 month', '2 Months'),
+#                  ('3 month', '3 Months'), ('6 month', '6 Months')],
+#         widget=forms.Select(attrs={'class': 'form-control'})
+#     )
    
-    class Meta:
-        model = InternRegistartion
-        fields = [
-            'student_Name', 'age', 'student_dob', 'contact_email', 'contact_phonenumber', 
-            'College_name', 'Department', 'Current_year', 'Year_of_graduation',
-            'student_skills', 'Address_line_1', 'Area', 'city', 'state', 'zipcode', 'domain', 
-            'duration', 'Linkedin_link', 'Github_link', 'Resume_link', 'reason'        ]
-        widgets = {
-            'student_Name': forms.TextInput(attrs={'class': 'form-control'}),
-            'age': forms.TextInput(attrs={'class': 'form-control'}),
-            'student_dob': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
-            'contact_email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'contact_phonenumber': forms.TextInput(attrs={'class': 'form-control'}),
-            'College_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'Department': forms.TextInput(attrs={'class': 'form-control'}),
-            'Current_year': forms.Select(choices=YEAR_CHOICES, attrs={'class': 'form-control'}),
-            'Year_of_graduation': forms.Select(choices=YEAR_OF_GRADUATION_CHOICES, attrs={'class': 'form-control'}),
-            'student_skills': forms.TextInput(attrs={'class': 'form-control'}),
-            'Address_line_1': forms.TextInput(attrs={'class': 'form-control'}),
-            'Area': forms.TextInput(attrs={'class': 'form-control'}),
-            'city': forms.TextInput(attrs={'class': 'form-control'}),
-            'state': forms.TextInput(attrs={'class': 'form-control'}),
-            'zipcode': forms.TextInput(attrs={'class': 'form-control'}),
-            'domain': forms.Select(choices=getdomainchoices(), attrs={'class': 'form-control'}),
-            'duration': forms.Select(choices=DURATION_CHOICES, attrs={'class': 'form-control'}),
-            'Linkedin_link': forms.URLInput(attrs={'class': 'form-control'}),
-            'Github_link': forms.URLInput(attrs={'class': 'form-control'}),
-            'Resume_link': forms.URLInput(attrs={'class': 'form-control'}),
-            'reason': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
+#     class Meta:
+#         model = InternRegistartion
+#         fields = [
+#             'student_Name', 'age', 'student_dob', 'contact_email', 'contact_phonenumber', 
+#             'College_name', 'Department', 'Current_year', 'Year_of_graduation',
+#             'student_skills', 'Address_line_1', 'Area', 'city', 'state', 'zipcode', 'domain', 
+#             'duration', 'Linkedin_link', 'Github_link', 'Resume_link', 'reason'        ]
+#         widgets = {
+#             'student_Name': forms.TextInput(attrs={'class': 'form-control'}),
+#             'age': forms.TextInput(attrs={'class': 'form-control'}),
+#             'student_dob': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+#             'contact_email': forms.EmailInput(attrs={'class': 'form-control'}),
+#             'contact_phonenumber': forms.TextInput(attrs={'class': 'form-control'}),
+#             'College_name': forms.TextInput(attrs={'class': 'form-control'}),
+#             'Department': forms.TextInput(attrs={'class': 'form-control'}),
+#             'Current_year': forms.Select(choices=YEAR_CHOICES, attrs={'class': 'form-control'}),
+#             'Year_of_graduation': forms.Select(choices=YEAR_OF_GRADUATION_CHOICES, attrs={'class': 'form-control'}),
+#             'student_skills': forms.TextInput(attrs={'class': 'form-control'}),
+#             'Address_line_1': forms.TextInput(attrs={'class': 'form-control'}),
+#             'Area': forms.TextInput(attrs={'class': 'form-control'}),
+#             'city': forms.TextInput(attrs={'class': 'form-control'}),
+#             'state': forms.TextInput(attrs={'class': 'form-control'}),
+#             'zipcode': forms.TextInput(attrs={'class': 'form-control'}),
+#             'domain': forms.Select(choices=getdomainchoices(), attrs={'class': 'form-control'}),
+#             'duration': forms.Select(choices=DURATION_CHOICES, attrs={'class': 'form-control'}),
+#             'Linkedin_link': forms.URLInput(attrs={'class': 'form-control'}),
+#             'Github_link': forms.URLInput(attrs={'class': 'form-control'}),
+#             'Resume_link': forms.URLInput(attrs={'class': 'form-control'}),
+#             'reason': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
             
-        }
-        labels = {
-            'student_Name': 'Name',
-            'age': 'Age',
-            'student_dob': 'Date of Birth',
-            'contact_email': 'Email',
-            'contact_phonenumber': 'Phone number',
-            'College_name': 'College Name',
-            'Department': 'Department',
-            'Current_year': 'Current Year in College',
-            'Year_of_graduation': 'Graduation Year',
-            'student_skills': 'Skills',
-            'Address_line_1': 'Address',
-            'Area': 'Area',
-            'city': 'City',
-            'state': 'State',
-            'zipcode': 'Pin Code',
-            'domain': 'Domain',
-            'duration': 'Duration',
-            'Linkedin_link': 'LinkedIn Profile',
-            'Github_link': 'GitHub Profile',
-            'Resume_link': 'Resume Link',
-            'reason': 'Why we should hire you',
+#         }
+#         labels = {
+#             'student_Name': 'Name',
+#             'age': 'Age',
+#             'student_dob': 'Date of Birth',
+#             'contact_email': 'Email',
+#             'contact_phonenumber': 'Phone number',
+#             'College_name': 'College Name',
+#             'Department': 'Department',
+#             'Current_year': 'Current Year in College',
+#             'Year_of_graduation': 'Graduation Year',
+#             'student_skills': 'Skills',
+#             'Address_line_1': 'Address',
+#             'Area': 'Area',
+#             'city': 'City',
+#             'state': 'State',
+#             'zipcode': 'Pin Code',
+#             'domain': 'Domain',
+#             'duration': 'Duration',
+#             'Linkedin_link': 'LinkedIn Profile',
+#             'Github_link': 'GitHub Profile',
+#             'Resume_link': 'Resume Link',
+#             'reason': 'Why we should hire you',
             
-        }
+#         }

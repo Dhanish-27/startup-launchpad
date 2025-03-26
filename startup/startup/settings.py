@@ -77,14 +77,24 @@ WSGI_APPLICATION = 'startup.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'altruisty_portfolio',
+#         'USER': 'root',
+#         'PASSWORD': 'Test@123',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'altruisty_portfolio',
-        'USER': 'root',
-        'PASSWORD': 'Test@123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'koyebdb',
+        'USER': 'dhanishadmin',
+        'PASSWORD': 'npg_saQcnuT08jxF',
+        'HOST': 'ep-curly-heart-a1v1y4bm.ap-southeast-1.pg.koyeb.app',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
