@@ -453,7 +453,7 @@ def coupon_check(request, id):
             return redirect(reverse('altruisty:payment', kwargs={'id': user.user_id}))
         
 def home(request):
-    return render(request,"index.html")
+    return render(request,"templates/index.html")
 
 def interns(request):
     return render(request,"internship.html")
