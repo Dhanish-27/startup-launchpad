@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Altruisty">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Altruisty</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.jpg' %}">
+
+
+
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/master-ai-agency.css' %}">
+    <style>
+        .bg-image-vertical {
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: auto 100%;
+        }
+
+        @media (min-width: 1025px) {
+            .h-custom-2 {
+                height: 100%;
+            }
+        }
+    </style>
+
+
+</head>
+
+
+<body class="font-heading-instumentsans-medium">
+
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+              
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="{% url 'altruisty:index' %}">home</a></li>
+                        <li><a href="{% url 'altruisty:about' %}">about</a></li>
+                        <li><a href="{% url 'altruisty:services' %}">services</a></li>
+                        <li><a href="{% url 'altruisty:E-learning' %}">E-learning registration</a></li>
+                        <li><a href="{% url 'altruisty:Mentorform' %}">Mentor registration</a></li>
+                        <li><a href="{% url 'altruisty:Startupform' %}">Startup registration</a></li>
+                        <li><a href="{% url 'altruisty:intern' %}">Internship</a></li>
+                        <li><a href="{% url 'altruisty:verify' %}">View internship</a></li>
+                        <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+                        <img class="show-dark" src="{% static 'assets/imgs/logo/logo-light.png' %}" alt="Site Logo">
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'altruisty:index' %}">Home</a>
+                            </li>
+                            <li><a href="{% url 'altruisty:about'%}">about</a></li>
+                            <!--<li class="menu-item-has-children">
+        <a href="#">portfolio</a>
+        <ul class="dp-menu">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="portfolio-material.html">App development</a></li>
+            <li><a href="portfolio-slicer.html">Ui/Ux and Graphic design</a></li>
+            <li><a href="portfolio-spring.html">Digital Marketting</a></li>
+        </ul>
+    </li>-->
+                            <li>
+                                <a href="{% url 'altruisty:services' %}">Services</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:E-learning' %}">E-learning Platform Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Mentorform' %}">Mentor Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Startupform' %}">Startup Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Internship</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:intern' %}">Intern Registration</a></li>
+                                    <li><a href="{% url 'altruisty:verify' %}">Intern Verification</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <a class="wc-btn wc-btn-primary btn-text-flip" href="contact.html"><span data-text="Login">Login</span></a>
+                </div>
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="has-smooth" id="has_smooth">
+
+    </div>
+    <main>
+
+
+        <div class="container-large pt-5 mt-5">
+            <div class="container large">
+                <div class="video-area">
+                    <div class="area-bg">
+                        <img src="https://feitian.edu/images/lib/ac-advissupp-gradacadv-2000x1334.jpeg" alt="image">
+                    </div>
+                    <div class="container">
+                        <div class="info-box">
+
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                        Verify Internship
+                                    </h2>
+                                </div>
+                            </div>
+                            <ul class="info-list " data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                <li> <a href="#" class="text">Welcome to the Internship Verification page on Altruisty! Here, students can verify their internship details to ensure they are accurately recorded and recognized</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container large">
+            <section class="feature-area">
+                <div class="container">
+                    <div class="feature-area-inner ">
+                        <div class="section-header">
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">We value our Interns with</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="feature-thumb">
+                                <div class="thumb">
+                                    <img src="https://cdn.sanity.io/images/qe2ul2l0/production/15dbede62f40e08f41e33890f7acb9789e767365-2000x1334.jpg?w=1050" alt="image">
+                                </div>
+
+                            </div>
+                            <div class="features-wrapper-box" data-aos="fade-left" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                <div class="features-wrapper">
+                                    <div class="feature-box">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-79.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Hands on trainning and mentorship</h3><br />
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Verify now</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-80.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">A Web Portal to showcase their contribution as intern </h3><br />
+
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Verify now</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-81.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">A Work culture that makes them feel ease </h3><br />
+
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Verify now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+      
+
+
+   
+
+   
+        <section class="info-area">
+            <div class="container-large mt-1 pb-3">
+                <div class="abody">
+                    <div class="wrapper">
+                        <h1>Intern Verification</h1>
+                        <form method="get" action="https://script.google.com/macros/s/AKfycbz5ty0wnZ8nxdaaAX90Z_ckhKZh1J8UFhm1_u0ni-fX3IdZDtp5TkL2QmX5Rq1Q56es/exec" name="dform">
+                            <div class="container">
+                                <div class="row">
+                                    <div class=" col-12 d-flex justify-content-center">
+                                        <div class="col-3 btn-wrapper has_fade_anim" id="forms" data-fade-from="left" data-duration="0.75" data-delay="0.60"
+                                             data-on-scroll="0">
+                                            <button type="submit" href="https://script.google.com/macros/s/AKfycbzxh9v5h_jU1_qM7T6p5KVCNhql3f7cYz-Of7zDLdvSpGNsyTQ8-8LyLDe5boCaJzIc/exec" class="wc-btn wc-btn-primary btn-text-flip ai-fill-btn">
+                                                <span data-text="Verify now">Check Your Identity</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </main>
+    <div class="overlay-switcher-close"></div>
+
+
+
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/backToTop.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/error-handling.js' %}"></script>
+    <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+    <script>
+
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 110,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+        // project slider
+        if (('.project-slider').length) {
+            var project_slider = new Swiper(".project-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 40,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".project-button-prev",
+                    nextEl: ".project-button-next",
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    type: 'bullets',
+                    clickable: true
+                },
+                breakpoints: {
+                    // when window width is >= px
+                    576: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1201: {
+                        slidesPerView: 3,
+                    },
+                    1367: {
+                        slidesPerView: 4,
+                    },
+                }
+            });
+        }
+
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // text slider
+        if ('.text-slider-active') {
+            var text_slider_active = new Swiper(".text-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 30,
+                speed: 10000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+      
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+
+</html>

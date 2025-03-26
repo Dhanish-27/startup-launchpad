@@ -1,0 +1,794 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Oct 2024 15:15:44 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arolax HTML5 Template">
+
+    <title>Altruisty Service</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+
+
+
+
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/master-contact.css' %}">
+
+
+</head>
+
+
+<body class="font-heading-beatricetrial-regular-2">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <!-- Cursor Animation -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- Switcher Area Start
+          <div class="switcher__area">
+      <div class="switcher__icon">
+        <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+        <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="switcher__items">
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">mode</p>
+          </div>
+          <div class="switcher__btn mode-type wc-col-2">
+            <button class="active" data-mode="light">light</button>
+            <button data-mode="dark">dark</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Language Support</p>
+          </div>
+          <div class="switcher__btn lang_dir wc-col-2">
+            <button class="active" data-mode="ltr">LTR</button>
+            <button data-mode="rtl">RTL</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Layout</p>
+          </div>
+          <div class="switcher__btn layout-type wc-col-2">
+            <button class="active" data-mode="full-width">Full Width</button>
+            <button data-mode="box-layout">Box Layout</button>
+          </div>
+        </div>
+        <div class="switcher__item">
+          <div class="switch__title-wrap">
+            <p class="switcher__title">Cursor</p>
+          </div>
+          <div class="switcher__btn">
+            <select name="cursor-style" id="cursor_style">
+              <option value="1">default</option>
+              <option selected value="2">animated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+          -->
+    <!-- Switcher Area End -->
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="">
+                    <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+                        <ul>
+                            <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
+                            <li><a href="mailto:contact@me.com">contact@me.com</a></li>
+                            <li>
+                                <a href="#">
+                                    27 Division St, <br>
+                                    New York, NY 10002, USA
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-3__social d-none d-md-block">
+                        <p class="title">Follow Me</p>
+                        <div class="offcanvas-3__social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/services">services</a></li>
+                        <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                            Registration</a></li>
+                    <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                        <li><a href="/internship">Internship</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end  -->
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal end -->
+    <!-- Header area start -->
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+                        <img class="show-dark" src="{% static 'assets/imgs/logo/logo-light.png' %}" alt="Site Logo">
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li><a href="/about">about</a></li>
+
+                            <li>
+                                <a href="/services">Services</a>
+
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                                            Registration</a></li>
+                                    <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/internship">Internship</a>
+                
+                              </li>
+
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="body-wrapper body-corporate-agency">
+
+                <!-- overlay switcher close  -->
+                <div class="overlay-switcher-close"></div>
+
+                <main>
+
+                    <!-- hero area start  -->
+                     <style>
+
+                        .hero-area .content-last .image-box .contact1{
+                            height: 400px;
+                        }
+
+                        @media screen and (max-width: 595px) {
+                            .hero-area .content-last .image-box .contact1{
+                                height: 450px;
+                            }
+                        }
+                     </style>
+                    <section class="hero-area">
+                        <div class="container">
+                            <div class="hero-area-inner">
+                                <div class="section-content">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h1 class="section-title large has_fade_anim">
+                                                We’re here to Help <br>
+                                                <br>
+                                                Let’s Build Something Great Together
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <div class="content-last">
+                                        <div class="col-first">
+                                            <div class="image-box overflow-hidden" >
+                                                <img src="{% static 'assets/imgs/myimgs/IMG_4618.jpg' %}" data-speed="0.9"
+                                                    alt="image" class="contact1">
+                                            </div>
+                                            <div class="contact-box">
+                                                <div class="shape-1">
+                                                    <img src="{% static 'assets/imgs/shape/img-s-89.webp' %}" alt="shape">
+                                                </div>
+                                                <span class="title">Direct contact: </span>
+                                                <p class="link"><a href="#">altruistybusiness@gmail.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-second">
+                                            <div class="image-box">
+                                                <img src="{% static 'assets/imgs/myimgs/1735887293891.jpg' %}" alt="image">
+                                            </div>
+                                            <div class="image-box overflow-hidden">
+                                                <img src="{% static 'assets/imgs/myimgs/1724220531582.jpg' %}" data-speed="0.9"
+                                                    alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="image-wrapper overflow-hidden">
+                        <img class="w-100" src="{% static 'assets/imgs/myimgs/contact 4.jpg' %}" data-speed="0.9" alt="image">
+                    </div>
+                    <!-- hero area end  -->
+                    <!-- contact area start  -->
+                    <section class="contact-area">
+                        <div class="container">
+                            <div class="contact-area-inner section-spacing">
+                                <div class="section-header">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h2 class="section-title large has_fade_anim">
+                                                We’ve been
+                                                waiting for you!
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="text-wrapper">
+                                        <p class="text has_fade_anim">
+                                            Add the best talent on the market, an agile skilled management &
+                                            seamless
+                                            involvement
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="section-content">
+                                    <div class="info-box has_fade_anim">
+                                        <div class="text-wrapper">
+                                            <p class="text">
+                                                We want to hear from you. let’s
+                                                us know how we can help!
+                                            </p>
+                                        </div>
+                                        <ul class="contact-list">
+                                            <li><a href="tel:+91 866 783 9838">+91 866 783 9838</a></li>
+                                            <li><a href="#">altruistybusiness@gmail.com</a></li>
+                                            <li>16, 12, 2nd St Rd, Urrur Kuppam, Besant Nagar, Chennai, Tamil Nadu
+                                                600090</li>
+                                        </ul>
+                                    </div>
+                                    <div class="contact-wrap has_fade_anim" data-delay="0.30">
+                                        <form action="#">
+                                            <div class="contact-formwrap">
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="Name" id="Name" placeholder="Name*">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="Email" id="Email" placeholder="Email*">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="Phone" id="Phone" placeholder="Phone">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="Subject" id="Subject"
+                                                        placeholder="Subject*">
+                                                </div>
+                                                <div class="contact-formfield messages">
+                                                    <input type="text" name="Messages" id="Messages"
+                                                        placeholder="Messages*">
+                                                </div>
+                                            </div>
+                                            <div class="submit-btn">
+                                                <button type="submit" class="wc-btn wc-btn-primary btn-text-flip">
+                                                    <span data-text="Send Message">Send Message</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- contact area end  -->
+
+                </main>
+
+                <!-- footer area start  -->
+                <style>
+                    .footer-area {
+                        background-color: var(--black);
+                        padding: 0 45px;
+                        border-radius: 20px;
+                    }
+
+                    .dark .footer-area {
+                        background-color: #1C1C1C;
+                    }
+
+                    @media only screen and (max-width: 991px) {
+                        .footer-area {
+                            padding: 0 15px;
+                        }
+                    }
+
+                    .footer-area-inner {
+                        display: grid;
+                        gap: 80px 50px;
+                        grid-template-columns: 365px 190px 190px 385px;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        padding-top: 130px;
+                        padding-bottom: 130px;
+                    }
+
+                    @media only screen and (max-width: 1919px) {
+                        .footer-area-inner {
+                            padding-top: 100px;
+                            padding-bottom: 100px;
+                            grid-template-columns: 265px 190px 190px 385px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 1399px) {
+                        .footer-area-inner {
+                            padding-top: 80px;
+                            padding-bottom: 80px;
+                            grid-template-columns: 225px 160px 160px 305px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 1199px) {
+                        .footer-area-inner {
+                            padding-top: 60px;
+                            padding-bottom: 60px;
+                            gap: 50px 60px;
+                            grid-template-columns: auto auto auto;
+                        }
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        .footer-area-inner {
+                            grid-template-columns: auto auto;
+                        }
+                    }
+
+                    @media (max-width: 575px) {
+                        .footer-area-inner {
+                            grid-template-columns: auto;
+                        }
+                    }
+
+                    .footer-area .footer-area-inner>* {
+                        min-width: 130px;
+                    }
+
+                    @media only screen and (max-width: 1199px) {
+                        .footer-area .footer-area-inner>*.newsletter {
+                            grid-column: span 2;
+                        }
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        .footer-area .footer-area-inner>*.newsletter {
+                            order: 1;
+                        }
+                    }
+
+                    @media (max-width: 575px) {
+                        .footer-area .footer-area-inner>*.newsletter {
+                            grid-column: auto;
+                        }
+                    }
+
+                    .footer-area .footer-logo img {
+                        max-height: 42px;
+                    }
+
+                    @media only screen and (max-width: 1199px) {
+                        .footer-area .footer-logo img {
+                            max-height: 34px;
+                        }
+                    }
+
+                    .footer-area .info-text {
+                        max-width: 270px;
+                        margin-top: 26px;
+                        color: var(--white-2);
+                    }
+
+                    .footer-area .footer-widget-wrapper .title {
+                        color: var(--white);
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 0.73;
+                    }
+
+                    @media only screen and (max-width: 1399px) {
+                        .footer-area .footer-widget-wrapper .title {
+                            font-size: 24px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 1199px) {
+                        .footer-area .footer-widget-wrapper .title {
+                            font-size: 22px;
+                        }
+                    }
+
+                    .footer-area .footer-nav-list {
+                        margin-top: 27px;
+                    }
+
+                    .footer-area .footer-nav-list li {
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: var(--white-2);
+                    }
+
+                    .footer-area .footer-nav-list li a:hover {
+                        color: var(--white);
+                    }
+
+                    .footer-area .footer-nav-list li .location {
+                        margin-bottom: 22px;
+                        display: inline-block;
+                    }
+
+                    .footer-area .social-links {
+                        display: flex;
+                        gap: 20px;
+                        margin-top: 56px;
+                    }
+
+                    @media only screen and (max-width: 1199px) {
+                        .footer-area .social-links {
+                            margin-top: 36px;
+                        }
+                    }
+
+                    .footer-area .social-links li {
+                        line-height: 1;
+                    }
+
+                    .footer-area .social-links li a {
+                        color: var(--white-2);
+                    }
+
+                    .footer-area .social-links li a:hover {
+                        color: var(--white);
+                    }
+
+                    .footer-area .newsletter-text {
+                        margin-top: 29px;
+                    }
+
+                    .footer-area .newsletter-text .text {
+                        color: var(--white-2);
+                    }
+
+                    .subscribe-form {
+                        margin-top: 38px;
+                    }
+
+                    .subscribe-form .input-field {
+                        background-color: #202020;
+                        border-radius: 5px;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        padding: 25px 25px;
+                    }
+
+                    @media only screen and (max-width: 1399px) {
+                        .subscribe-form .input-field {
+                            padding: 18px 25px;
+                        }
+                    }
+
+                    .subscribe-form .input-field input {
+                        border: 0;
+                        background-color: #202020;
+                        color: var(--white);
+                        width: 100%;
+                    }
+
+                    .subscribe-form .input-field input::-moz-placeholder {
+                        color: var(--white-2);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1;
+                    }
+
+                    .subscribe-form .input-field input::placeholder {
+                        color: var(--white-2);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1;
+                    }
+
+                    .subscribe-form .input-field input:focus {
+                        outline: 0;
+                    }
+
+                    .subscribe-form .input-field .subscribe-btn img,
+                    .subscribe-form .input-field .subscribe-btn i {
+                        color: var(--theme);
+                    }
+
+                    .dir-rtl .subscribe-form .input-field .subscribe-btn img,
+                    .dir-rtl .subscribe-form .input-field .subscribe-btn i {
+                        transform: rotateY(180deg);
+                    }
+
+                    .subscribe-form .input-field .icon {
+                        color: var(--white-2);
+                    }
+
+                    .subscribe-form .policy-field {
+                        margin-top: 20px;
+                    }
+
+                    .subscribe-form .policy-field label {
+                        font-size: 14px;
+                        margin-inline-start: 6px;
+                    }
+
+                    .subscribe-form .policy-field label span {
+                        color: var(--primary);
+                        font-weight: 500;
+                    }
+
+                    .copyright-area-inner {
+                        border-top: 1px solid rgba(255, 255, 255, 0.08);
+                        padding: 32px 0;
+                        position: relative;
+                    }
+
+                    @media only screen and (max-width: 1399px) {
+                        .copyright-area-inner {
+                            padding: 22px 0;
+                        }
+                    }
+
+                    .copyright-area .copyright-text .text {
+                        text-align: center;
+                        font-weight: 500;
+                        color: var(--white-2);
+                    }
+
+                    .copyright-area .copyright-text .text a {
+                        color: var(--white);
+                    }
+                </style>
+
+
+
+
+                <footer class="footer-area">
+                    <div class="container">
+
+                        <div class="footer-area-inner">
+                            <div class="footer-widget-wrapper">
+                                <div class="footer-logo">
+                                    <a href="#"><img src="{% static 'assets/imgs/logo/logo-light-Footer.png' %}" alt="site-logo"></a>
+                                </div>
+                                <p class="info-text">16, 12, 2nd St Rd, Urrur Kuppam, Besant Nagar, Chennai,
+                                    Tamil Nadu 600090</p>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget-wrapper">
+                                <h2 class="title">Service</h2>
+                                <ul class="footer-nav-list">
+                                    <li><a href="#">Virtual Incubation</a></li>
+                                    <li><a href="#">Software Solutions</a></li>
+                                    <li><a href="#">Bussiness Solutions</a></li>
+                                    <li><a href="#">Mentorship and Training</a></li>
+                                    <li><a href="#">Education Empowerment</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget-wrapper">
+                                <h2 class="title">Company</h2>
+                                <ul class="footer-nav-list">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Registeration</a></li>
+                                    <li><a href="#">Internship</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget-wrapper newsletter">
+                                <h2 class="title">Newsletter</h2>
+                                <div class="newsletter-text">
+                                    <p class="text">Feel free to reach out if you want to collaborate with
+                                        us, or simply have a chat.
+                                    </p>
+                                </div>
+                                <form action="#" class="subscribe-form">
+                                    <div class="input-field">
+                                        <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                                        <input type="email" placeholder="Enter your email">
+                                        <button type="submit" class="subscribe-btn"><i
+                                                class="fa-solid fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+
+                    <div class="copyright-area">
+                        <div class="container">
+                            <div class="copyright-area-inner">
+                                <div class="copyright-text">
+                                    <p class="text">
+                                        © 2022 - 2025 | Alrights reserved <br>
+                                        by <a href="https://themeforest.net/user/crowdytheme"
+                                            target="_blank">Alruisty</a>
+                                    </p>
+                                </div>
+                                <ul class="footer-nav-list">
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="/services">Services</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer area end  -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- All JS files -->
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/backToTop.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/error-handling.js' %}"></script>
+    <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+    <script>
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 130,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Oct 2024 15:16:05 GMT -->
+
+</html>

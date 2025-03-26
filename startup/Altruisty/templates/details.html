@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arolax HTML5 Template">
+    <title>{{ heading }}</title>  <!-- Set the page title dynamically -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/master-services.css' %}">
+
+    <style>
+        /* Styling for the card layout */
+        .details-page h1 {
+            text-align: center; /* Center the heading */
+            font-size: 3.5em; /* Increase heading size */
+            color: #333;
+            margin-bottom: 50px;
+            margin-top: 100px;
+        }
+
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+            gap: 30px; /* Increase space between cards */
+        }
+
+        .service-item {
+            background-color: #f9f9f9;
+            padding: 40px; /* Increase padding */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            text-align: center;
+            margin: 20px;
+            opacity: 0; /* Hide initially */
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+
+            .service-item img {
+                width: 100%;
+                height: 300px; /* Set a fixed height for all images */
+                object-fit: cover; /* Maintain aspect ratio and fill the space */
+                border-radius: 20px; /* Make the image slightly rounded */
+                margin-bottom: 20px; /* Increase space below the image */
+            }
+
+            .service-item h3 {
+                font-size: 2em; /* Increase heading size */
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+            .service-item p {
+                font-size: 1.2em; /* Increase text size */
+                color: #666;
+            }
+
+        /* Animation keyframes */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animation classes */
+        .service-item.slide-in-left {
+            animation: slideInLeft 1s forwards;
+        }
+
+        .service-item.slide-in-right {
+            animation: slideInRight 1s forwards;
+        }
+
+        @media (max-width: 768px) {
+            .service-details {
+                grid-template-columns: 1fr; /* 1 card per row for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-details {
+                grid-template-columns: 1fr; /* Keep 1 card per row for mobile */
+            }
+        }
+    </style>
+
+</head>
+<body class="font-heading-beatricetrial-regular-2">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <!-- Cursor Animation -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- Switcher Area Start -->
+   
+    <!-- Switcher Area End -->
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+               
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="{% url 'altruisty:index' %}">home</a></li>
+                        <li><a href="{% url 'altruisty:about' %}">about</a></li>
+                        <li><a href="{% url 'altruisty:services' %}">services</a></li>
+                        <li><a href="{% url 'altruisty:E-learning' %}">E-learning registration</a></li>
+                        <li><a href="{% url 'altruisty:Mentorform' %}">Mentor registration</a></li>
+                        <li><a href="{% url 'altruisty:Startupform' %}">Startup registration</a></li>
+                        <li><a href="{% url 'altruisty:CollegeForm' %}">College registration</a></li>
+                        <li><a href="{% url 'altruisty:intern' %}">Internship</a></li>
+                        <li><a href="{% url 'altruisty:verify' %}">View internship</a></li>
+                        <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end  -->
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal end -->
+    <!-- Header area start -->
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="assets/imgs/logo/logo.png" alt="Site Logo">
+                        <img class="show-dark" src="assets/imgs/logo/logo-light.png" alt="Site Logo">
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'altrusity:index' %}">Home</a>
+
+                            </li>
+                            <li><a href="{% url 'altrusity:about' %}">About</a></li>
+                            <!--  <li class="menu-item-has-children">
+          <a href="#">portfolio</a>
+          <ul class="dp-menu">
+              <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+              <li><a href="portfolio-material.html">Portfolio Material</a></li>
+              <li><a href="portfolio-slicer.html">Portfolio Slicer</a></li>
+              <li><a href="portfolio-spring.html">Portfolio Spring</a></li>
+          </ul>
+      </li>-->
+                            <li>
+                                <a href="{% url 'altrusity:services' %}">Services</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:E-learning' %}">E-learning Platform Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Mentorform' %}">Mentor Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Startupform' %}">Startup Registration</a></li>
+                                    <li><a href="{% url 'altruisty:CollegeForm' %}">College Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Internship</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altrusity:intern' %}">Internship Registration</a></li>
+                                    <li><a href="{% url 'altrusity:verify' %}">Verify Internship</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'altrusity:contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <a class="wc-btn wc-btn-primary btn-text-flip" href="contact.html">
+                        <span data-text="Get started">
+                            Get
+                            started
+                        </span>
+                    </a>
+                </div>
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+    <div class="details-page">
+        <h1>{{ heading }}</h1>  <!-- Centered service heading dynamically -->
+        {% if service_details %}
+        <div class="service-details">
+            {% for title, image, description in service_details %}
+            <div class="service-item">
+                <img src="{% static 'assets/imgs/gallery/' %}{{ image }}" alt="{{ title }}">
+                <h3>{{ title }}</h3>
+                <p>{{ description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No details available for this service.</p>
+        {% endif %}
+    </div>
+
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceItems = document.querySelectorAll('.service-item');
+
+            // Helper function to check if an element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                       rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+            }
+
+            // Add scroll event listener to trigger animation when elements come into view
+            window.addEventListener('scroll', function () {
+                serviceItems.forEach((item, index) => {
+                    if (isInViewport(item)) {
+                        if (index % 2 === 0) {
+                            item.classList.add('slide-in-left'); // Left-side animation for even items
+                        } else {
+                            item.classList.add('slide-in-right'); // Right-side animation for odd items
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+re.search(MNpat,Mentor_Name) and re.search(CEpat,contact_email) and re.search(CPpat,contact_phonenumber) and re.search(Expat,Expertise) and re.search(JTpat,Job_title) and re.search(Copat,Company_organisation) and re.search(YEpat,Year_of_experience) and re.search(AL1pat,Address_line_1) and re.search(Apat,Area) and re.search(Cpat,city) and re.search(Spat,state) and re.search(ZCpat,zipcode) and re.search(SBpat,Short_bio)
+save = MentorRegistartion(Mentor_Name = rdata.split("-")[0], contact_email = rdata.split("-")[1], contact_phonenumber = rdata.split("-")[2], Expertise = rdata.split("-")[3], Job_title = rdata.split("-")[4], Company_organisation = rdata.split("-")[5], Year_of_experience = rdata.split("-")[6], Address_line_1 = addressvalue, Area = rdata.split("-")[8], city = rdata.split("-")[9], state = rdata.split("-")[10], zipcode = rdata.split("-")[11], Focus_area = rdata.split("-")[12], Available_days = rdata.split("-")[13], Linkedin_link = linkedvalue, Github_link = githubvalue, resume_link = resumevalue, Short_bio = rdata.split("-")[17])
+        save.save()
+
+
+
+re.search(MNpat,str(Mentor_Name))and re.sear
+
+
+
+ch(CEpat,str(contact_email)) and re.search(CPpat,str(contact_phonenumber)) and re.search(Expat,str(Expertise)) and re.search(JTpat,str(Job_title)) and re.search(Copat,str(Company_organisation)) and re.search(YEpat,str(Year_of_experience)) and re.search(AL1pat,str(Address_line_1)) and re.search(Apat,str(Area)) and re.search(Cpat,str(city)) and re.search(Spat,str(state)) and re.search(ZCpat,str(zipcode)) and re.search(SBpat,str(Short_bio))
+
+ these are template , model and view for mentor registration , write a forms.py file with choices for select and update view file

@@ -1,0 +1,795 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/ai-agency.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Oct 2024 02:04:42 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arolax HTML5 Template">
+
+    <title>Altruisty</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.jpg' %}">
+
+
+
+
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/master-ai-agency.css' %}">
+
+
+</head>
+
+
+<body class="font-heading-instumentsans-medium">
+
+    <!-- Preloader -->
+  
+
+    <!-- Cursor Animation -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- Switcher Area Start -->
+  
+    <!-- Switcher Area End -->
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="">
+                    <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+                        <ul>
+                            <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
+                            <li><a href="mailto:contact@me.com">contact@me.com</a></li>
+                            <li>
+                                <a href="#">
+                                    27 Division St, <br>
+                                    New York, NY 10002, USA
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-3__social d-none d-md-block">
+                        <p class="title">Follow Me</p>
+                        <div class="offcanvas-3__social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="{% url 'altruisty:index' %}">home</a></li>
+                        <li><a href="{% url 'altruisty:about' %}">about</a></li>
+                        <li><a href="{% url 'altruisty:services' %}">services</a></li>
+                        <li><a href="{% url 'altruisty:E-learning' %}">E-learning registration</a></li>
+                        <li><a href="{% url 'altruisty:Mentorform' %}">Mentor registration</a></li>
+                        <li><a href="{% url 'altruisty:Startupform' %}">Startup registration</a></li>
+                        <li><a href="{% url 'altruisty:intern' %}">Internship registration</a></li>
+                        <li><a href="{% url 'altruisty:CollegeForm' %}">College registration</a></li>
+                        <li><a href="{% url 'altruisty:verify' %}">View internship</a></li>
+                        <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end  -->
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal end -->
+    <!-- Header area start -->
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+                        
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'altruisty:index' %}">Home</a>
+                            </li>
+                            <li><a href="{% url 'altruisty:about' %}">about</a></li>
+                            <!-- <li class="menu-item-has-children">
+         <a href="#">portfolio</a>
+         <ul class="dp-menu">
+             <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+             <li><a href="portfolio-material.html">Portfolio Material</a></li>
+             <li><a href="portfolio-slicer.html">Portfolio Slicer</a></li>
+             <li><a href="portfolio-spring.html">Portfolio Spring</a></li>
+         </ul>
+     </li> -->
+                            <li>
+                                <a href="{% url 'altruisty:services' %}">Services</a>
+
+                            </li>
+                            <li>
+                                <a class="menu-item-has-children">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:E-learning' %}">E-learning Platform Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Mentorform' %}">Mentor Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Startupform' %}">Startup Registration</a></li>
+                                    <li><a href="{% url 'altruisty:CollegeForm' %}">College Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Internship</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:intern' %}">Intern Registration</a></li>
+                                    <li><a href="https://script.google.com/macros/s/AKfycbwf3oy3kdGkgaSc0M_WRj7A8qUyv3ljwcHm7faN9LF5jKiF20Rvtge9NYksHxWqCX_m/exec">Intern Verification</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <a class="wc-btn wc-btn-primary btn-text-flip" href="contact.html">
+                        <span data-text="get in touch">
+                           Login
+                        </span>
+                    </a>
+                </div>
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="body-wrapper body-ai-agency">
+
+                <!-- overlay switcher close  -->
+                <div class="overlay-switcher-close"></div>
+
+                <main>
+
+                    <!-- hero area start  -->
+                    <div class="container large">
+                        <section class="hero-area">
+                            <div class="container">
+                                <div class="hero-area-inner">
+                                    <div class="shape-1">
+                                        <img class="show-light" src="assets/imgs/shape/img-s-74.webp" alt="image">
+                                        <img class="show-dark" src="assets/imgs/shape/img-s-74-light.webp" alt="image">
+                                    </div>
+
+                                    <span class="section-title has_fade_anim px-2" data-fade-from="left" data-duration="0.75"
+                                          data-delay="0.30" style="font-size:80px;color:#000">
+                                        Empowering Future Leaders
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="section-content">
+                                <div class="info-box">
+                                    <div class="thumb has_fade_anim" data-fade-from="left" data-duration="0.75" data-delay="0.60">
+                                        <img class="show-light" src="{% static 'assets/imgs/gallery/img-s-81.png' %}" alt="image">
+                                        <img class="show-dark" src="assets/imgs/gallery/img-s-81-light.webp" alt="image">
+                                    </div>
+                                    <div class="text-wrapper has_fade_anim" data-fade-from="left" data-duration="0.75" data-delay="0.60">
+                                        <p class="text">
+                                            Make your Dream come reality
+                                        </p>
+                                    </div>
+                                    <div class="btn-wrapper has_fade_anim" data-fade-from="left" data-duration="0.75" data-delay="0.60"
+                                         data-on-scroll="0">
+                                        <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip ai-fill-btn">
+                                            <span data-text="get started">
+                                                Login
+                                            </span><i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="bg cf_image overflow-hidden">
+                                        <img src="{% static 'assets/imgs/gallery/img-s-82.webp' %}" data-speed="0.9" alt="image">
+                                    </div>
+                                    <div class="feature-list-wrapper">
+                                        <div class="feature-list">
+                                            <div class="feature-list-item">
+                                                <span class="icon">
+                                                    <img src="{% static 'assets/imgs/icon/check-3.webp' %}" alt="icon image">
+                                                </span>
+                                                <p class="text">
+                                                    diverse talents and a
+                                                    shared passion
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- hero area end  -->
+                    <!-- about area start  -->
+                    <section class="about-area">
+                        <div class="container">
+                            <div class="about-area-inner section-spacing">
+                                <div class="section-content">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h2 class="section-title has_text_move_anim">
+                                                Empowering business
+                                                transformation in a way
+                                                of unique fundamental
+                                                solutions
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="content-last">
+                                        <div class="text-wrapper">
+                                            <p class="text has_text_move_anim" data-delay="0.30">
+                                                At Altruisty, we're more than just a service provider &#8722; we&#39 re a community-driven platform dedicated to nurturing young talent and supporting entrepreneurs on their journey to success. By offering high-quality internships for students and professional digital services for startups, we bridge the gap between education and real-world experience, creating a win-win for students and businesses alike.
+                                            </p>
+
+                                        </div>
+                                        <div class="btn-wrapper has_fade_anim" data-fade-from="top" data-fade-offset="70"
+                                             data-ease="bounce">
+                                            <a href="about.html" class="wc-btn wc-btn-primary btn-text-flip bordered">
+                                                <span data-text="Learn more">
+                                                    Learn
+                                                    more
+                                                </span><i class="fa-solid fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- about area end  -->
+                    <!-- info area start  -->
+                    <section class="info-area">
+                        <div class="container">
+                            <div class="info-area-inner section-spacing">
+                                <div class="area-shape-1 has_fade_anim" data-fade-from="left" data-duration="2" data-delay="0.3"
+                                     data-fade-offset="80" data-ease="bounce">
+                                    <img src="{% static 'assets/imgs/shape/img-s-75.png' %}" alt="image">
+                                </div>
+                                <div class="info-points">
+                                    <div class="shape-1">
+                                        <img class="show-light" src="{% static 'assets/imgs/shape/img-s-77.webp' %}" alt="image">
+                                        <img class="show-dark" src="assets/imgs/shape/img-s-77-dark.webp" alt="image">
+                                    </div>
+                                    <div class="bg">
+                                        <img src="{% static 'assets/imgs/shape/img-s-76.jpg' %}" alt="image">
+                                    </div>
+                                    <div class="info-list">
+                                        <ul>
+                                            <li>What we do as Expert</li>
+                                            <li>+ Software Development</li>
+                                            <li>+ Design and Marketting</li>
+                                            <li>+ Mentorship and Investment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="infos-wrapper-box">
+                                    <div class="infos-wrapper">
+                                        <div class="info-box">
+                                            <div class="content">
+                                                <h2 class="title has_fade_anim" data-fade-from="left">Vision</h2>
+                                                <p class="text has_text_move_anim">To empower entrepreneurs and students by providing comprehensive resources, expert mentorship, and strategic support to turn ideas into successful ventures.</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-box">
+                                            <div class="content">
+                                                <h2 class="title has_fade_anim">Mission</h2>
+                                                <p class="text has_text_move_anim">To be the leading launchpad for startups, fostering innovation and driving entrepreneurial success, It serves as a guiding principle, driving actions and decisions to fulfill a specific purpose</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- info area end  -->
+                    <!-- feature area start  -->
+                    <div class="container large">
+                        <section class="feature-area">
+                            <div class="container">
+                                <div class="feature-area-inner section-spacing">
+                                    <div class="section-header">
+                                        <div class="section-title-wrapper">
+                                            <div class="title-wrapper">
+                                                <h2 class="section-title has_text_move_anim">
+                                                    Get in Touch for Enhancement
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-content">
+                                        <div class="feature-thumb">
+                                            <div class="thumb">
+                                                <img src="{% static 'assets/imgs/gallery/img-s-83.png' %}" alt="image">
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="features-wrapper-box">
+                                            <div class="features-wrapper">
+                                                <div class="feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                                                    <div class="thumb">
+                                                        <img src="{% static 'assets/imgs/shape/img-s-79.webp' %}" alt="feature icon">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3 class="title">Company Community Group</h3>
+                                                        <p class="text">This group is for chatting in topic-based groups and getting important announcements.</p><br />
+                                                        <a href="" class="wc-btn wc-btn-underline ">Join Now</a>
+                                                    </div>
+                                                </div>
+                                                <div class="feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                                                    <div class="thumb">
+                                                        <img src="{% static 'assets/imgs/shape/img-s-80.webp' %}" alt="feature icon">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3 class="title">Students Community Group </h3>
+                                                        <p class="text">Workshop information, inter-college event info are shared in this group.</p><br />
+                                                        <a href="" class="wc-btn wc-btn-underline ">Join Now</a>
+                                                    </div>
+                                                </div>
+                                                <div class="feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                                                    <div class="thumb">
+                                                        <img src="{% static 'assets/imgs/shape/img-s-81.webp' %}" alt="feature icon">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3 class="title">Community Channel Group</h3>
+                                                        <p class="text">Startup competitions, workshops, college event info are shared in this channel.</p><br />
+                                                        <a href="" class="wc-btn wc-btn-underline ">Join Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- feature area end  -->
+                    <!-- service area start  -->
+                    <section class="service-area">
+                        <div class="container">
+                            <div class="service-area-inner ">
+
+                                <div id="serviced">
+                                    <style>
+                                        .services-grid {
+                                            display: grid;
+                                            gap: 20px;
+                                            grid-template-columns: repeat(1, 1fr);
+                                        }
+
+                                        .icons {
+                                            color: #000;
+                                            transition: 1s;
+                                        }
+
+                                            .icons:hover {
+                                                color: rgb(255,165,0);
+                                            }
+
+                                        .service-item {
+                                            background-color: #f9f9f9;
+                                            padding: 20px;
+                                            border-radius: 8px;
+                                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                            text-align: center;
+                                        }
+
+                                            .service-item h2 {
+                                                font-size: 1.5rem;
+                                                margin: 15px 0;
+                                            }
+
+                                            .service-item .icon img {
+                                                width: 50px;
+                                                height: 50px;
+                                                margin-bottom: 15px;
+                                            }
+
+                                        .service-features {
+                                            list-style: none;
+                                            padding: 0;
+                                            font-size: 0.9rem;
+                                        }
+
+                                            .service-features li {
+                                                padding: 5px 0;
+                                                color: #333;
+                                            }
+
+                                        /* Media query for tablets and larger screens */
+                                        @media (min-width: 768px) {
+                                            .services-grid {
+                                                grid-template-columns: repeat(2, 1fr);
+                                            }
+                                        }
+
+                                        /* Media query for laptops and larger screens */
+                                        @media (min-width: 1024px) {
+                                            .services-grid {
+                                                grid-template-columns: repeat(4, 1fr);
+                                            }
+                                        }
+                                    </style>
+                                    <section class="service-area section-spacing">
+                                        <div class="container">
+                                            <h2 class="section-title has_fade_anim" data-fade-from="bottom" data-fade-offset="70">
+                                                We are Expertised in
+                                            </h2>
+                                            <div class="services-wrapper-box">
+                                                <div class="services-grid">
+                                                    <!-- Service Item 1 -->
+                                                    <div class="service-item has_fade_anim" data-fade-from="bottom" data-fade-offset="70" data-delay="0.15">
+                                                        <div class="icon">
+                                                            <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(2).png' %}" alt="service-icon">
+                                                            <img class="show-dark" src="assets/imgs/icon/icon-s-1-light.webp" alt="service-icon">
+                                                        </div>
+                                                        <h2 class="title icons">Software Development</h2>
+
+                                                    </div>
+                                                    <!-- Service Item 2 -->
+                                                    <div class="service-item has_fade_anim" data-fade-from="bottom" data-fade-offset="70" data-delay="0.30">
+                                                        <div class="icon">
+                                                            <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(3).png' %}" alt="service-icon">
+                                                            <img class="show-dark" src="assets/imgs/icon/icon-s-2-light.webp" alt="service-icon">
+                                                        </div>
+                                                        <h2 class="title icons">Design and Marketting</h2>
+
+                                                    </div>
+                                                    <!-- Service Item 3 -->
+                                                    <div class="service-item has_fade_anim" data-fade-from="bottom" data-fade-offset="70" data-delay="0.45">
+                                                        <div class="icon">
+                                                            <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(2).png' %}" alt="service-icon">
+                                                            <img class="show-dark" src="assets/imgs/icon/icon-s-3-light.webp" alt="service-icon">
+                                                        </div>
+                                                        <h2 class="title icons">Mentorship and Trainning</h2>
+
+                                                    </div>
+                                                    <!-- Service Item 4 -->
+                                                    <div class="service-item has_fade_anim" data-fade-from="bottom" data-fade-offset="70" data-delay="0.60">
+                                                        <div class="icon">
+                                                            <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(1).png'%}" alt="service-icon">
+                                                            <img class="show-dark" src="assets/imgs/icon/icon-s-4-light.webp" alt="service-icon">
+                                                        </div>
+                                                        <h2 class="title icons">Internship and Trainning</h2>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- service area end  -->
+                    <!-- video area start  -->
+                    <div class="container large">
+                        <div class="video-area">
+                            <div class="area-bg">
+                                <img src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?cs=srgb&dl=pexels-hillaryfox-1595385.jpg&fm=jpg" alt="image">
+                            </div>
+                            <div class="container">
+                                <div class="info-box">
+
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h2 class="section-title has_fade_anim" data-fade-from="bottom" data-fade-offset="70">
+                                                Our Startup Services
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <ul class="info-list has_fade_anim" data-fade-from="bottom">
+                                        <li> <a href="" class="wc-btn wc-btn-underline ">+ Investor Connect</a></li>
+                                        <li> <a href="" class="wc-btn wc-btn-underline ">+ Patent and Copyright</a></li>
+                                        <li> <a href="" class="wc-btn wc-btn-underline ">+ Funding Preparation</a></li>
+                                        <li> <a href="" class="wc-btn wc-btn-underline ">+ Idea to Product Development</a></li>
+                                        <li> <a href="" class="wc-btn wc-btn-underline ">+ Company Registration </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- video area end  -->
+                    <section class="about-area">
+
+                        <div class="container">
+                            <div class="about-area-inner section-spacing">
+                                <div class="section-content">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h3 class="section-title  has_text_move_anim mt-4 d-flex justify-content-center">Internship and Trainning</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="content-last">
+                                        <div class="text-wrapper">
+                                            <p class="text has_text_move_anim" data-delay="0.30">At Altruisty, we're more than just a service provider&#8722; we&#39 re a community-driven platform dedicated to nurturing young talent and supporting entrepreneurs on their journey to success. By offering high-quality internships for students and professional digital services for startups, we bridge the gap between education and real-world experience, creating a win-win for students and businesses alike.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+
+                    <div class="container large">
+                        <div class="video-area" style=" display: flex; flex-direction: row;">
+                            <div class="area-bg" style=" flex: 1;">
+                                <img src="{% static 'assets/imgs/shape/img-s-224.jpg' %}" alt="image">
+                            </div>
+                            <div class="container">
+                                <div class="info-box" style=" flex: 1; margin-left:20px;  padding: 20px;">
+
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h2 class="section-title has_fade_anim" data-fade-from="bottom" data-fade-offset="70">
+                                                Register to work with us
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <ul class="info-list has_fade_anim" data-fade-from="bottom">
+                                        <li> <a href="{% url 'altruisty:intern' %}" class="wc-btn wc-btn-underline ">+ Intern Registration</a></li>
+                                        <li> <a href="{% url 'altruisty:verify' %}" class="wc-btn wc-btn-underline ">+ Intern Verification</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- client area start  -->
+                    
+                    <!-- client area end  -->
+                    <!-- faq area start  -->
+                    
+                    <!-- faq area end  -->
+                    <!-- blog area start  -->
+                    
+                    <!-- blog area end  -->
+
+                </main>
+
+                <!-- footer area start  -->
+                <div class="container large pt-3">
+                    <footer class="footer-area">
+                        <div class="container">
+                            <div class="footer-area-inner">
+                                <div class="footer-widget-wrapper">
+                                    <div class="footer-logo">
+                                        <a href="#"><img src="assets/imgs/logo/logo-light.png" alt="site-logo"></a>
+                                    </div>
+                                    <p class="info-text">Arolax is a startup design agency based in Canada</p>
+                                    <ul class="social-links">
+                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">Service</h2>
+                                    <ul class="footer-nav-list">
+                                        <li><a href="#">UI/UX Design</a></li>
+                                        <li><a href="#">Web Design</a></li>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">Webflow</a></li>
+                                        <li><a href="#">Development</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">Company</h2>
+                                    <ul class="footer-nav-list">
+                                        <li><a href="{% url 'altruisty:index' %}">Home</a></li>
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="{% url 'altruisty:intern' %}">Internship</a></li>
+                                        <li><a href="{% url 'altruisty:contact' %}">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper newsletter">
+                                    <h2 class="title">Empowering Future Leaders</h2>
+                                    <div class="newsletter-text">
+                                        <p class="text">
+                                            Feel free to reach out if you want to collaborate with us, or simply have a chat.
+                                        </p>
+                                    </div>
+                                    <form action="#" class="subscribe-form">
+                                        <div class="input-field">
+                                            <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+                                            <input type="email" placeholder="Enter your email">
+                                            <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="copyright-area">
+                                <div class="container">
+                                    <div class="copyright-area-inner">
+                                        <div class="copyright-text">
+                                            <p class="text">
+                                                2024-25 <a href="../../../themeforest.net/user/crowdytheme.html"
+                                                           target="_blank">crowdyTheme</a>
+                                                Agency
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- footer area end  -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- All JS files -->
+
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/backToTop.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/error-handling.js' %}"></script>
+    <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+    <script>
+
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 110,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+        // project slider
+        if (('.project-slider').length) {
+            var project_slider = new Swiper(".project-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 40,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".project-button-prev",
+                    nextEl: ".project-button-next",
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    type: 'bullets',
+                    clickable: true
+                },
+                breakpoints: {
+                    // when window width is >= px
+                    576: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1201: {
+                        slidesPerView: 3,
+                    },
+                    1367: {
+                        slidesPerView: 4,
+                    },
+                }
+            });
+        }
+
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // text slider
+        if ('.text-slider-active') {
+            var text_slider_active = new Swiper(".text-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 30,
+                speed: 10000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/ai-agency.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Oct 2024 02:04:52 GMT -->
+</html>

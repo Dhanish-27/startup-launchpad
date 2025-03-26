@@ -1,0 +1,736 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Altruisty HTML5 Template">
+
+  <title>Altruisty About</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.jpg">
+
+
+
+
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/master-about-bold.css' %}">
+
+
+</head>
+
+
+<body class="font-heading-teko-bold">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="container" class="container-preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text="A" class="characters">A</span>
+          <span data-text="L" class="characters">L</span>
+          <span data-text="T" class="characters">T</span>
+          <span data-text="R" class="characters">R</span>
+          <span data-text="U" class="characters">U</span>
+          <span data-text="I" class="characters">I</span>
+          <span data-text="S" class="characters">S</span>
+          <span data-text="T" class="characters">T</span>
+          <span data-text="Y" class="characters">Y</span>
+        </div>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+
+  <!-- Cursor Animation -->
+  <div class="cursor1"></div>
+  <div class="cursor2"></div>
+
+  <!-- Sroll to top -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+
+  <!-- offcanvas start  -->
+  <div class="offcanvas-3__area">
+    <div class="offcanvas-3__inner">
+        <div class="offcanvas-3__meta-wrapper">
+            <div class="">
+                <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="">
+                <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+                    <ul>
+                        <li><a href="tel:+91 8667839838" class="unnerline"><u>+91 8667839838</u></a></li>
+                        <li><a href="mailto:altruistybusiness@gmail.com">altruistybusiness@gmail.com</a></li>
+                        <li><a href="#">16, 12, 2nd St Rd, Urrur Kuppam, Besant Nagar, Chennai, Tamil Nadu
+                                600090</a></li>
+                    </ul>
+                </div>
+                <div class="offcanvas-3__social d-none d-md-block">
+                    <p class="title">Follow Me</p>
+                    <div class="offcanvas-3__social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas-3__menu-wrapper">
+            <nav class="nav-menu offcanvas-3__menu">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="about/">about</a></li>
+                    <li><a href="services">services</a></li>
+                    <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                        Registration</a></li>
+                <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                    <li><a href="/internship">Internship</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- offcanvas end  -->
+
+<!-- Header area start -->
+<header class="header-area">
+    <div class="container large">
+        <div class="header-area__inner">
+            <div class="header__logo">
+                <a href="#">
+                    <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+                    <img class="show-dark" src="{% static 'assets/imgs/logo/logo-light.png' %}" alt="Site Logo">
+                </a>
+            </div>
+            <div class="header__nav pos-center">
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li><a href="/about">about</a></li>
+
+                        <li>
+                            <a href="/services">Services</a>
+
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Registration</a>
+                            <ul class="dp-menu">
+                                <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                                        Registration</a></li>
+                                <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/internship">Internship</a>
+            
+                          </li>
+
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__navicon d-xl-none">
+                <button onclick="showCanvas3()" class="open-offcanvas">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+  <!-- Header area end -->
+
+  <div class="has-smooth" id="has_smooth"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="body-wrapper body-creative-agency">
+
+
+
+        <!-- overlay switcher close  -->
+        <div class="overlay-switcher-close"></div>
+
+        <main>
+
+          <!-- about area start  -->
+          <style>
+            @media screen and (max-width:595px) {
+
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6,
+              p {
+                text-align: center;
+              }
+
+            }
+
+            .about-area .container .info h1 {
+              font-size: 40px;
+
+            }
+
+            .about-area .container .info p {
+              font-size: 20px;
+            }
+          </style>
+          <section class="about-area" style="overflow: hidden;">
+            <div class="image-wrapper overflow-hidden">
+              <img class="w-100 has_fade_anim" data-fade-offset="0" data-delay="0.30"
+                src="{% static 'assets/imgs/gallery/About.svg' %}" data-speed="0.8" alt="image">
+            </div>
+            <div class="container">
+              <div class="about-area-inner section-spacing-top">
+                <div class="shape-1 has_fade_anim" data-fade-offset="0">
+                  <img class="show-light" src="{% static 'assets/imgs/shape/img-s-90.webp' %}" alt="image">
+                  <img class="show-dark" src="{% static 'assets/imgs/shape/img-s-90-light.webp' %}" alt="image">
+                </div>
+                <div class="section-content">
+                  <div class="section-title-wrapper">
+                    <div class="subtitle-wrapper">
+                      <style>
+                        @media screen and (max-width:595px) {
+                          .subtitle-wrapper {
+                            display: flex;
+                            justify-content: center;
+
+                          }
+
+                          .content-bottom .clients-wrapper {
+                            display: flex;
+                            justify-content: center;
+                          }
+
+                        }
+                      </style>
+                      <span class="section-subtitle has_fade_anim" style="font-size: 30px;">Who we are</span>
+                    </div>
+                    <div class="title-wrapper">
+                      <h1 class="section-title has_fade_anim">
+                        We are "Altruisty" Driven by innovation and collaborates agency based in teamwork!
+
+                      </h1>
+                    </div>
+                  </div>
+                  <div class="content-bottom">
+                    <div class="clients-wrapper has_fade_anim" data-fade-from="left">
+
+                      <div class="info">
+                        <h1 class="number">100+</h1>
+                        <p class="text">Training programmes
+
+                        </p>
+                      </div>
+                    </div>
+                    <div class="info-wrapper">
+                      <div class="text-wrapper">
+                        <p class="text has_fade_anim">Our development team works: at forefront technology "Altruisty" is
+                          culture of innovation and collaboration we prioritize open communication within the team to
+                          our success</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="about-gallery-wrapper">
+                  <div class="row-first has_fade_anim">
+                    <div class="thumb">
+                      <img src="{% static 'assets/imgs/myimgs/about 1.jpg' %}" alt="image">
+                    </div>
+                  </div>
+                  <div class="row-second has_fade_anim" >
+                    <div class="thumb">
+                      <img src="{% static 'assets/imgs/myimgs/about 2.jpg' %}" alt="image">
+                    </div>
+                    <div class="thumb">
+                      <img src="{% static 'assets/imgs/myimgs/about 3.jpg' %}" alt="image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- about area end  -->
+
+          <!-- process area start  -->
+          <style>
+            @media screen and (max-width:595px) {
+              .process-area .title {
+                text-align: center;
+              }
+
+              .process-area .thumb {
+                display: flex;
+                justify-content: center;
+              }
+            }
+          </style>
+          <section class="process-area">
+            <div class="container">
+              <div class="process-area-inner section-spacing">
+                <div class="process-wrapper-box">
+                  <div class="process-wrapper">
+                    <div class="process-box has_fade_anim" data-fade-from="left" data-delay="0.45">
+                      <div class="thumb">
+                        <img class="show-light" src="{% static 'assets/imgs/icon/icon-s-14.webp' %}" alt="process icon">
+                        <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-14-light.webp' %}" alt="process icon">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">virtual incubation</h3>
+                        <p class="text">Our Virtual Incubation is an end-to-end solution for startups, offering
+                          comprehensive support, resources, and mentorship.</p>
+                      </div>
+                    </div>
+                    <div class="process-box has_fade_anim" data-fade-from="left" data-delay="0.30">
+                      <div class="thumb">
+                        <img class="show-light" src="{% static 'assets/imgs/icon/icon-s-13.webp' %}" alt="process icon">
+                        <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-13-light.webp' %}" alt="process icon">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">E-Learning Platform</h3>
+                        <p class="text">
+                          Our E-learning platform delivers engaging, accessible, and personalized online education to
+                          empower learners worldwide.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="process-box has_fade_anim" data-fade-from="left" data-delay="0.15">
+                      <div class="thumb">
+                        <img class="show-light" src="{% static 'assets/imgs/icon/icon-s-12.webp' %}" alt="process icon">
+                        <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-12-light.webp' %}" alt="process icon">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">Internship Program</h3>
+                        <p class="text">Altruisty offers an internship focused on developing and enhancing a web
+                          application designed to support social good initiatives.</p>
+                      </div>
+                    </div>
+
+
+                    <div class="process-box has_fade_anim" data-fade-from="left" data-delay="0.60">
+                      <div class="thumb">
+                        <img class="show-light" src="{% static 'assets/imgs/icon/icon-s-15.webp' %}" alt="process icon">
+                        <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-15-light.webp' %}" alt="process icon">
+                      </div>
+                      <div class="content">
+                        <h3 class="title">Software solution</h3>
+                        <p class="text">Altruisty Service provides innovative software solutions designed to empower
+                          businesses with seamless, scalable, and efficient technology.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- process area end  -->
+
+          <!-- clients area start  -->
+          <div class="container-hd has_fade_anim">
+            <div class="clients-area">
+              <div class="container">
+                <div class="clients-area-inner">
+                  <div class="shape-1">
+                    <img src="{% static 'assets/imgs/shape/img-s-83.webp' %}" alt="shape">
+                  </div>
+                  <!--<div class="client-slider">
+                <div class="swiper client-slider-active">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">-->
+                  <!--<div class="client-box">
+                  <img src="{% static '..assets/imgs/brand/img-s-1-light.webp' %}" alt="client image">
+                </div>-->
+                  <!--</div>
+                <div class="swiper-slide">-->
+                  <!--<div class="client-box">
+                  <img src="{% static '..assets/imgs/brand/img-s-2-light.webp' %}" alt="client image">
+                </div>-->
+                  <!--</div>
+                <div class="swiper-slide">-->
+                  <!--<div class="client-box">
+                  <img src="{% static '..assets/imgs/brand/img-s-3-light.webp' %}" alt="client image">
+                </div>-->
+                  <!--</div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <img src="{% static '..assets/imgs/brand/img-s-4-light.webp' %}" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <img src="{% static '..assets/imgs/brand/img-s-5-light.webp' %}" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <img src="{% static '..assets/imgs/brand/img-s-6-light.webp' %}" alt="client image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- clients area end  -->
+
+          <!-- counter area start  -->
+           <style>
+            .counter-area{
+              height: 40vh;
+              @media screen and (max-width: 595px) {
+               height: 50vh;
+               display: flex;    
+              }
+            }
+           </style>
+          <div class="counter-area has_fade_anim">
+            <div class="container">
+              <div class="counter-area-inner">
+                <div class="counter-items">
+                  <div class="counter-item">
+                    <div class="counter-item-content">
+                      <h2 class="title wc-counter">2</h2>
+                      <p class="text">
+                        <span>+</span>
+                        Years of <br>
+                        experience
+                      </p>
+                    </div>
+                  </div>
+                  <div class="counter-item">
+                    <div class="counter-item-content">
+                      <h2 class="title wc-counter">10k</h2>
+                      <p class="text">
+                        <span>+</span>
+                        students<br>
+
+                      </p>
+                    </div>
+                  </div>
+                  <div class="counter-item">
+                    <div class="counter-item-content">
+                      <h2 class="title wc-counter">50</h2>
+                      <p class="text">
+                        <span>+</span>
+                        Projects
+
+                      </p>
+                    </div>
+                  </div>
+                  <div class="counter-item">
+                    <div class="counter-item-content">
+                      <h2 class="title wc-counter">100</h2>
+                      <p class="text">
+                        <span>+</span>
+                        Collaborations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- counter area end  -->
+
+          <!-- awards area start  -->
+          <style>
+            .awards-area {
+              height: 80vh;
+              overflow: hidden;
+            }
+
+            .awards-area .row {
+              background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/imgs/gallery/img-s-6.webp);
+            }
+
+            .awards-area .row .desc-text {
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              transform: translateY(-10%);
+            }
+            .awwards-area .section-title{
+                transform: translateY(-10vh);
+              }
+
+            @media screen and (max-width:595px) {
+              .awards-area{
+                height: 90vh;
+              }
+              .awards-area img {
+                height: 400px;
+                margin-bottom: 10vh;
+              }
+              
+
+            }
+          </style>
+          <section class="awards-area">
+            <div class="container">
+              <div class="row">
+                <div class="image col">
+                  <img src="{% static 'assets/imgs/myimgs/IMG_4585.jpg' %}" alt="">
+                </div>
+                <div class="desc-text col-md">
+                  <div class="text-container">
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">We believe in <br>
+                        quality, not quantity</h2>
+                      <br>
+                      <div class="text-wrapper">
+                        <p class="text has_fade_anim" style="color: white;">
+                          At Altruisty Service, we believe in delivering quality, not quantity, which reflects our
+                          commitment to providing tailored software solutions that truly meet the unique needs of each
+                          business.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- awards area end  -->
+
+          <!-- team area start  -->
+          <section class="team-area">
+            <div class="container">
+              <div class="team-area-inner section-spacing">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">Team, <span><img src="{% static 'assets/imgs/shape/img-s-5.webp' %}"
+                            alt="shape image">
+                          behind</span> the
+                        Alturisty</h2>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="team-wrapper-box">
+                  <div class="team-wrapper">
+                    <div class="team-box has_fade_anim" data-fade-from="bottom" data-delay="0.15" data-fade-offset="30"
+                      data-duration="0.75">
+                      <a href="">
+                        <div class="thumb">
+                          <img src="{% static 'assets/imgs/team/001.jpg' %}" alt="team icon">
+                        </div>
+                        <div class="content">
+                          <h3 class="title">Siva Sathya</h3>
+                          <p class="text">CEO, Alturisty</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="team-box has_fade_anim" data-fade-from="top" data-delay="0.30" data-fade-offset="30"
+                      data-duration="0.75">
+                      <a href="">
+                        <div class="thumb">
+                          <img src="{% static 'assets/imgs/team/002.jpg' %}" alt="team icon">
+                        </div>
+                        <div class="content">
+                          <h3 class="title">Manikandan</h3>
+                          <p class="text">CTO</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- team area end  -->
+
+
+
+
+
+
+
+
+
+
+          <!-- Bootstrap JS and dependencies -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- cta area start  -->
+          <section class="cta-area">
+            <div class="container">
+              <div class="cta-area-inner section-spacing">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="subtitle-wrapper">
+                      <span class="section-subtitle has_fade_anim">🖐️ Hello
+                        <img class="show-light" src="{% static 'assets/imgs/shape/img-s-6.webp' %}" alt="image">
+                        <img class="show-dark" src="{% static 'assets/imgs/shape/img-s-6-light.webp' %}" alt="image">
+                      </span>
+                    </div>
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_fade_anim">Let’s Talk
+                        with us</h2>
+                    </div>
+                  </div>
+                  <div class="btn-wrapper has_fade_anim">
+                    <a href="mailto:altruistybusiness@gmail.com"
+                      class="wc-btn wc-btn-underline">altruistybusiness@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- cta area end  -->
+
+        </main>
+
+        <!-- footer area start  -->
+        <footer class="footer-area">
+          <div class="container large">
+            <div class="copyright-area-inner">
+              <div class="copyright-text">
+                <p class="text">© 2024-25 Altruisty</p>
+              </div>
+
+              <ul class="social-links">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <!-- footer area end  -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- All JS files -->
+  <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/counter.js' %}"></script>
+  <script src="{% static 'assets/js/progressbar.js' %}"></script>
+  <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+  <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+  <script src="{% static 'assets/js/backToTop.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/error-handling.js' %}"></script>
+  <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+  <script>
+
+    // testimonial slider
+    if (('.testimonial-slider').length) {
+      var testimonial_slider = new Swiper(".testimonial-slider", {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        speed: 1800,
+        watchSlidesProgress: true,
+        navigation: {
+          prevEl: ".testimonial-button-prev",
+          nextEl: ".testimonial-button-next",
+        },
+        pagination: {
+          el: '.testimonial-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+        breakpoints: {
+          // when window width is >= px
+          576: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          992: {
+            slidesPerView: 1,
+          },
+          1201: {
+            slidesPerView: 1,
+          },
+          1367: {
+            slidesPerView: 1,
+          },
+        }
+      });
+    }
+
+
+    // client slider 
+    if ('.client-slider-active') {
+      var client_slider_active = new Swiper(".client-slider-active", {
+        slidesPerView: 'auto',
+        loop: true,
+        autoplay: true,
+        spaceBetween: 130,
+        speed: 3000,
+        autoplay: {
+          delay: 1,
+        },
+      });
+    }
+
+
+  </script>
+
+</body>
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/about-bold.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 12 Oct 2024 15:21:00 GMT -->
+
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Altruisty">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Altruisty</title>
+    <link rel="stylesheet" href="../static/assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../static/assets/imgs/logo/favicon.jpg">
+
+
+
+
+
+    <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/all.min.css">
+    <link rel="stylesheet" href="../static/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../static/assets/css/progressbar.css">
+    <link rel="stylesheet" href="../static/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/assets/css/master-ai-agency.css">
+   
+    <style>
+        .bg-image-vertical {
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: auto 100%;
+        }
+
+        @media (min-width: 1025px) {
+            .h-custom-2 {
+                height: 100%;
+            }
+        }
+    </style>
+
+    
+</head>
+
+
+<body class="font-heading-instumentsans-medium">
+
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+               
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="{% url 'altruisty:index">home</a></li>
+                        <li><a href="{% url 'altruisty:about">about</a></li>
+                        <li><a href="{% url 'altruisty:services">services</a></li>
+                        <li><a href="{% url 'altruisty:E-learning">E-learning registration</a></li>
+                        <li><a href="{% url 'altruisty:Mentorform">Mentor registration</a></li>
+                        <li><a href="{% url 'altruisty:Startupform">Startup registration</a></li>
+                        <li><a href="{% url 'altruisty:intern">Internship</a></li>
+                        <li><a href="{% url 'altruisty:verify">View internship</a></li>
+                        <li><a href="{% url 'altruisty:contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="../static/assets/imgs/logo/logo.png" alt="Site Logo">
+                        <img class="show-dark" src="../static/assets/imgs/logo/logo-light.png" alt="Site Logo">
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'altruisty:index">Home</a>
+                            </li>
+                            <li><a href="{% url 'altruisty:about">about</a></li>
+                            <!-- <li class="menu-item-has-children">
+         <a href="#">portfolio</a>
+         <ul class="dp-menu">
+             <li><a href="#">Web Development</a></li>
+             <li><a href="portfolio-material.html">App development</a></li>
+             <li><a href="portfolio-slicer.html">Ui/Ux and Graphic design</a></li>
+             <li><a href="portfolio-spring.html">Digital Marketting</a></li>
+         </ul>
+     </li>-->
+                            <li>
+                                <a href="{% url 'altruisty:services">Services</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:E-learning">E-learning Platform Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Mentorform">Mentor Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Startupform">Startup Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Internship</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:intern">Intern Registration</a></li>
+                                    <li><a href="{% url 'altruisty:verify">Intern Verification</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'altruisty:contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="has-smooth" id="has_smooth">
+
+    </div>
+    <main>
+
+
+        <div class="container-large pt-5 mt-5">
+            <div class="container large">
+                <div class="video-area">
+                    <div class="area-bg">
+                        <img src="https://res.cloudinary.com/highereducation/images/f_auto,q_auto/v1620062682/AffordableCollegesOnline.org/shutterstock_1661342359/shutterstock_1661342359.jpg?_i=AA" alt="image">
+                    </div>
+                    <div class="container">
+                        <div class="info-box">
+
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                        Internship and Trainning
+                                    </h2>
+                                </div>
+                            </div>
+                            <ul class="info-list " data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                <li> <a href="#" class="text"> Our Internship Training at Altruisty bridges the gap between academic knowledge and professional experience through hands-on projects and expert mentorship. Develop skills and confidence to excel in your career with our comprehensive training.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container large">
+            <section class="feature-area">
+                <div class="container">
+                    <div class="feature-area-inner section-spacing">
+                        <div class="section-header">
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">Our Trainning Internship Involves</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="feature-thumb">
+                                <div class="thumb">
+                                    <img src="../static/assets/imgs/shape/img-s-2222(2).jpg" alt="image">
+                                </div>
+
+                            </div>
+                            <div class="features-wrapper-box" data-aos="fade-left" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">
+                                <div class="features-wrapper">
+                                    <div class="feature-box">
+                                        <div class="thumb">
+                                            <img src="../static/assets/imgs/shape/img-s-79.webp" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Core Domain Training Internship</h3><br />
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="../static/assets/imgs/shape/img-s-80.webp" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Technology Domain Training Internship </h3><br />
+
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="../static/assets/imgs/shape/img-s-81.webp" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Student Choice Training Internship</h3><br />
+
+                                            <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div id="serviced">
+            <style>
+                .services-grid {
+                    display: grid;
+                    gap: 20px;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .service-item {
+                    background-color: #f9f9f9;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                }
+
+                .icons {
+                    color: #000;
+                    transition: 1s;
+                }
+
+                    .icons:hover {
+                        color: rgb(255,165,0);
+                    }
+
+                .service-item h2 {
+                    font-size: 1.5rem;
+                    margin: 15px 0;
+                }
+
+                .service-item .icon img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 15px;
+                }
+
+                .service-features {
+                    list-style: none;
+                    padding: 0;
+                    font-size: 0.9rem;
+                }
+
+                    .service-features li {
+                        padding: 5px 0;
+                        color: #333;
+                    }
+
+                /* Media query for tablets and larger screens */
+                @media (min-width: 768px) {
+                    .services-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                /* Media query for laptops and larger screens */
+                @media (min-width: 1024px) {
+                    .services-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            </style>
+            <section class="service-area ">
+                <div class="container">
+                    <div class="service-top-wrapper ">
+                        <div class="section-heading col-12 d-flex justify-content-evenly ">
+                            <h2 class=" section-title">Domains</h2>
+                        </div>
+                        <div class="content">
+                            <p class="text mt-3">
+                                We provide various Domains in our Internship. By this you can participate in sector which you wish to learn.The Technology and multiple domain sector are created to improve your skills in several competative domains.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-wrapper-box">
+                        <div class="services-grid  ">
+                            <!-- Service Item 1 -->
+                            <div class="service-item " data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-223(1).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-1-light.webp" alt="service-icon">
+                                </div>
+
+                                <h2 class="title "><span class="icons">IoT</span></h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+
+
+
+                            </div>
+                            <!-- Service Item 2 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.30">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-223(2).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-2-light.webp" alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Robotics</h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                            </div>
+                            <!-- Service Item 3 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.45">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-223(3).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-3-light.webp" alt="service-icon">
+                                </div>
+                                <h2 class="title icons">FullStack Development</h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-222(4).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-1-light.webp" alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Mernstack Development</h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-223(4).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-1-light.webp" alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Ai and Ml</h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                            </div>
+                            <!-- Service Item 4 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true" data-delay="0.60">
+                                <div class="icon">
+                                    <img class="show-light" src="../static/assets/imgs/shape/img-s-223(3).png" alt="service-icon">
+                                    <img class="show-dark" src="assets/imgs/icon/icon-s-4-light.webp" alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Ui &amp; Ux</h2>
+                                <a href="#forms" class="wc-btn wc-btn-underline ">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+        <div class="section-heading mt-5  pb-3 col-12 d-flex justify-content-center">
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50" data-aos-duration="5000" data-aos-once="true">Join with us to Explore</h2>
+        </div>
+
+        <section class="">
+            <div class="container-large mt-1 pb-3">
+                <div class="abody">
+                    <div class="wrapper">
+                        <h1>Intern Registration</h1>
+                        <form method="POST" action="https://script.google.com/macros/s/AKfycbxvXGrsRwGrXLB085-51ebEBfcMuGWgt2WQ66g7plS2hrxwsXKXB6Mwggzhwzo5qh7B/exec" id="dform">
+                            {% csrf_token  %}
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xl-12 d-md-flex justify-content-evenly ">
+                                        <div class="col-12 col-md-3">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentname">
+                                                <label>name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentage">
+                                                <label>age</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdob">
+                                                <label>Date of Birth</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="email" required name="studentemail">
+                                                <label>email</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="tel" required name="studentphone">
+                                                <label>phone number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentclg">
+                                                <label>college name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdept">
+                                                <label>Dept</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcurrentyear">
+                                                <label>Current year in college</label>
+                                            </div>
+
+                                            <div class="input-field ">
+                                                <input type="text" required name="studentgradyear">
+                                                <label class="">Graduation year</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentskills" rows="3" />
+                                                <label>Skills</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="address" rows="3" />
+                                                <label>address</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcity">
+                                                <label>city</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentstate">
+                                                <label>state</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcountry">
+                                                <label>country</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="pincode">
+                                                <label> pin code</label>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-12 d-md-flex justify-content-evenly mt-2">
+                                        <div class="col-md-5 col-12">
+
+                                            <label for="domain" class="">Domain</label>
+
+                                            <div class="input-field">
+
+                                                <select name="domain" class="form-control">
+                                                    <option value="Web">Web</option>
+                                                    <option value="App">App</option>
+                                                    <option value="Digital">Digital</option>
+                                                    <option value="Graphic">Graphic</option>
+                                                    <option value="Training">Training</option>
+                                                    <option value="Internship">Internship</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 col-12">
+                                            <label for="duration">Duration</label>
+
+                                            <div class="input-field">
+
+                                                <select name="duration" class="form-control">
+                                                    <option value="1 month">1 month</option>
+                                                    <option value="3 months">3 months</option>
+                                                    <option value="6 months">6 months</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-md-flex  justify-content-evenly  ">
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentlp" rows="3" />
+                                            <label>Linked in profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentgp">
+                                            <label>Github profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="resumeurl">
+                                            <label>Resume Link</label>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="input-field ">
+                                        <input type='text' required name="studentreason" rows="3" />
+                                        <label>Why we need to hire you</label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-3 btn-wrapper has_fade_anim" id="forms" data-fade-from="left" data-duration="0.75" data-delay="0.60"
+                                 data-on-scroll="0">
+                                <input type="submit" value="submit" class="wc-btn wc-btn-primary btn-text-flip ai-fill-btn" />
+
+
+                            </div>
+
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+    <div class="overlay-switcher-close"></div>
+
+
+
+    <script src="../static/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../static/assets/js/swiper-bundle.min.js"></script>
+    <script src="../static/assets/js/counter.js"></script>
+    <script src="../static/assets/js/progressbar.js"></script>
+    <script src="../static/assets/js/gsap.min.js"></script>
+    <script src="../static/assets/js/ScrollSmoother.min.js"></script>
+    <script src="../static/assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../static/assets/js/ScrollTrigger.min.js"></script>
+    <script src="../static/assets/js/SplitText.min.js"></script>
+    <script src="../static/assets/js/jquery.meanmenu.min.js"></script>
+    <script src="../static/assets/js/backToTop.js"></script>
+    <script src="../static/assets/js/main.js"></script>
+    <script src="../static/assets/js/error-handling.js"></script>
+    <script src="../static/assets/js/offcanvas.js"></script>
+
+    <script>
+     
+
+        const url = "https://script.google.com/macros/s/AKfycbx9AHMN5-Y_tTlF3UiihWN_932S2wJXrwovA71yiHKQlDb7JrOe6fMH002IwF3rSvem/exec"
+            const form = document.forms['dform']
+            await form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(url, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("thank you"))
+
+                    .catch(error => console.error("error"))
+            });
+
+           
+       
+    </script>
+    <script>
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 110,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+        // project slider
+        if (('.project-slider').length) {
+            var project_slider = new Swiper(".project-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 40,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".project-button-prev",
+                    nextEl: ".project-button-next",
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    type: 'bullets',
+                    clickable: true
+                },
+                breakpoints: {
+                    // when window width is >= px
+                    576: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1201: {
+                        slidesPerView: 3,
+                    },
+                    1367: {
+                        slidesPerView: 4,
+                    },
+                }
+            });
+        }
+
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // text slider
+        if ('.text-slider-active') {
+            var text_slider_active = new Swiper(".text-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 30,
+                speed: 10000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+
+</html>

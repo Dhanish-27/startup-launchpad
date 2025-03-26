@@ -1,0 +1,1528 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Altruisty">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <title>Altruisty</title>
+    <link rel="stylesheet" href="{% static 'assets/css/intern/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.jpg">
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/intern/master-ai-agency.css' %}">
+
+    <style>
+        .bg-image-vertical {
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: auto 100%;
+        }
+
+        @media (min-width: 1025px) {
+            .h-custom-2 {
+                height: 100%;
+            }
+        }
+        #qrPopup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 1000;
+    }
+    #qrPopup img {
+        max-width: 300px;
+        border-radius: 10px;
+    }
+    #closeQRPopup {
+        display: block;
+        margin-top: 10px;
+        padding: 5px 10px;
+        background: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    </style>
+
+
+</head>
+
+
+<body class="font-heading-instumentsans-medium">
+
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+
+
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="">
+                    <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+                        <ul>
+                            <li><a href="tel:+91 8667839838" class="unnerline"><u>+91 8667839838</u></a></li>
+                            <li><a href="mailto:altruistybusiness@gmail.com">altruistybusiness@gmail.com</a></li>
+                            <li><a href="#">16, 12, 2nd St Rd, Urrur Kuppam, Besant Nagar, Chennai, Tamil Nadu
+                                    600090</a></li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-3__social d-none d-md-block">
+                        <p class="title">Follow Me</p>
+                        <div class="offcanvas-3__social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/services">services</a></li>
+                        <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                            Registration</a></li>
+                    <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                        <li><a href="/internship">Internship</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end  -->
+
+
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal end -->
+
+<style>
+    .header-area a{
+        font-family: 'Poppins', sans-serif;
+    }
+</style>
+
+    <!-- Header area start -->
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+                        <img class="show-dark" src="{% static 'assets/imgs/logo/logo-light.png' %}" alt="Site Logo">
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li><a href="/about">about</a></li>
+
+                            <li>
+                                <a href="/services">Services</a>
+
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="https://forms.gle/52muHKqUvp4mZcPt5">Training Internship
+                                            Registration</a></li>
+                                    <li><a href="comingsoon.html">E-learning Platform Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/internship">Internship</a>
+                
+                              </li>
+
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="has-smooth" id="has_smooth" style="padding-top: 5vh;">
+
+    </div>
+    <main>
+
+        <style>
+
+        </style>
+        <div class="container-large pt-5 mt-5">
+            <div class="container large">
+                <div class="video-area">
+                    <div class="area-bg">
+                        <img src="{% static 'assets/imgs/gallery/img-s-82.webp' %}" alt="image">
+                    </div>
+                    <div class="container">
+                        <div class="info-box" style="text-align: center;">
+
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"
+                                        data-aos-duration="5000" data-aos-once="true">
+                                        Internship and Trainning
+                                    </h2>
+                                </div>
+                            </div>
+                            <ul class="info-list " data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true">
+                                <li> <a href="#" class="text"> Our Internship Training at Altruisty bridges the gap
+                                        between academic knowledge and professional experience through hands-on projects
+                                        and expert mentorship. Develop skills and confidence to excel in your career
+                                        with our comprehensive training.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container large">
+            <section class="feature-area">
+                <div class="container">
+                    <div class="feature-area-inner section-spacing">
+                        <div class="section-header">
+                            <div class="section-title-wrapper">
+                                <div class="title-wrapper">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50"
+                                        data-aos-duration="5000" data-aos-once="true">Our Trainning Internship Involves
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="feature-thumb">
+                                <div class="thumb">
+                                    <img src="{% static 'assets/imgs/gallery/img-s-83.webp' %}" alt="image">
+                                </div>
+
+                            </div>
+                            <div class="features-wrapper-box" data-aos="fade-left" data-aos-delay="50"
+                                data-aos-duration="5000" data-aos-once="true">
+                                <div class="features-wrapper">
+                                    <div class="feature-box">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-79.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Core Domain Training Internship</h3><br />
+                                            <a href="" class="wc-btn wc-btn-underline ">View Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-80.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Technology Domain Training Internship </h3><br />
+
+                                            <a href="" class="wc-btn wc-btn-underline ">View Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-box ">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/imgs/shape/img-s-81.webp' %}" alt="feature icon">
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="title">Student Choice Training Internship</h3><br />
+
+                                            <a href="" class="wc-btn wc-btn-underline ">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div id="serviced">
+            <style>
+                .services-grid {
+                    display: grid;
+                    gap: 20px;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .service-item {
+                    background-color: #f9f9f9;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                }
+
+                .icons {
+                    color: #000;
+                    transition: 1s;
+                }
+
+                .icons:hover {
+                    color: rgb(255, 165, 0);
+                }
+
+                .service-item h2 {
+                    font-size: 1.5rem;
+                    margin: 15px 0;
+                }
+
+                .service-item .icon img {
+                    width: 50px;
+                    height: 50px;
+                    margin-bottom: 15px;
+                }
+
+                .service-features {
+                    list-style: none;
+                    padding: 0;
+                    font-size: 0.9rem;
+                }
+
+                .service-features li {
+                    padding: 5px 0;
+                    color: #333;
+                }
+
+                /* Media query for tablets and larger screens */
+                @media (min-width: 768px) {
+                    .services-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                /* Media query for laptops and larger screens */
+                @media (min-width: 1024px) {
+                    .services-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            </style>
+            <section class="service-area ">
+                <div class="container">
+                    <div class="service-top-wrapper ">
+                        <div class="section-heading col-12 d-flex justify-content-evenly ">
+                            <h2 class=" section-title">Domains</h2>
+                        </div>
+                        <div class="content">
+                            <p class="text mt-3">
+                                We provide various Domains in our Internship. By this you can participate in sector
+                                which you wish to learn.The Technology and multiple domain sector are created to improve
+                                your skills in several competative domains.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-wrapper-box">
+                        <div class="services-grid  ">
+                            <!-- Service Item 1 -->
+                            <div class="service-item " data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(1).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-1-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+
+                                <h2 class="title "><span class="icons">Web Development</span></h2>
+                                <a class="wc-btn wc-btn-underline " data-title=" Web Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Top-notch web development training with a hands-on, project-based approach."
+                                    data-syllabus="<h5>Week 1: Introduction to Web Development and HTML  </h5>
+Day 1: Introduction to web development and Installation of IDEs.  
+Day 2: Git Basics, GitHub Repository.  
+Day 3: Figma and Introduction to HTML, Tags, Elements, and Structure.  
+Day 4: Creating Forms, Tables, List, and Links in HTML.  
+Day 5: Semantic Elements, Multimedia.  
+
+<h5>Week 2: Cascading Style Sheets (CSS) and Bootstrap </h5> 
+Day 1: Introduction to CSS, Styling the Web Page.  
+Day 2: Box Model, Display Properties, and Card Layout.  
+Day 3: Flexbox, Grid, and Responsive Design; Introduction to Bootstrap and Bootstrap Grid System.  
+Day 4: Bootstrap components and Utilities.  
+Day 5: Icons and responsive designs.  
+
+<h5>Week 3: JavaScript (JS)  </h5>
+Day 1: JavaScript Basics, Functions, and Events.  
+Day 2: Arrays and Objects.  
+Day 3: DOM Manipulation, Event Handling.  
+Day 4: Form Validation and Object-Oriented Programming.  
+Day 5: APIs, JSON, Fetching Data, and Error Handling.  
+
+<h5>Week 4: Database  </h5>
+Day 1: Introduction to Database and SQL.  
+Day 2: MySQL Constraints, Functions, and Joins.  
+Day 3: Subquery, Views, and Indexing.  
+Day 4: Advanced MySQL concepts.  
+Day 5: Hosting and Deployment of Website and its complete Development Process."
+                                    data-fee="₹1000 (Up to 70% off with coupons)"
+                                    data-duration="1 hour 30 mins - 2 hours per session"
+                                    data-frequency="5 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, Hard copy ₹100"
+                                    
+                                    data-contact-phone="8667839838" data-website="https://altruisty.in"
+                                    onclick="showCourseDetails(this)">View Details</a>
+                            </div>
+
+                            <!-- Service Item 2 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.30">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(2).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-2-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">App Development</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="App Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in mobile app development covering frontend, backend, database management, and deployment."
+                                    data-syllabus="<h5>Week 1: Introduction to Flutter and Dart</h5>  
+Day 1: Introduction to Flutter and Dart and Figma  
+Day 2: How to set up Flutter and Dart and Git, GitHub  
+Day 3: Basics of Dart Language (Concepts and Datatypes)  
+
+<h5>Week 2: Dart Programming</h5>  
+Day 1: Dart Language (Conditions and Loops)  
+Day 2: Dart Language (Functions and Classes)  
+Day 3: Dart Language (List and Try, Catch)  
+
+<h5>Week 3: Flutter Language</h5>  
+Day 1: Simple App Design  
+Day 2: Stateless Widget vs Stateful Widgets  
+Day 3: Buttons and Icons  
+
+<h5>Week 4: Layouts & UI Design</h5>  
+Day 1: Text Field and Images  
+Day 2: Padding and Container  
+Day 3: Rows and Columns  
+
+<h5>Week 5: Building App</h5>  
+Day 1: Navigator and Set State  
+Day 2: Build an ID Page  
+Day 3: Currency Converter  
+
+<h5>Week 6: Building App</h5>  
+Day 1: List View Builder  
+Day 2: To-Do App  
+Day 3: Packages  
+
+<h5>Week 7: API Keys</h5>  
+Day 1: Access API Keys  
+Day 2: Building a Simple Game  
+Day 3: Building a Simple Game  
+
+<h5>Week 8: State Provider</h5>  
+Day 1: Creating Alert Box  
+Day 2: State Provider  
+Day 3: State Management  
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="6 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.30">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(3).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-2-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Generatie AI</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="Generative AI Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in Generative AI covering neural networks, GANs, transformers, diffusion models, and AI-generated content development."
+                                    data-syllabus="<h5>Week 1: Introduction to Generative AI</h5>  
+Day 1: Python Basics and Git and GitHub  
+Day 2: Introduction to AI, ML, and Generative AI  
+Day 3: Basics of TensorFlow and PyTorch for AI Development  
+Day 4: Basics of Neural Networks  
+Day 5: Autoencoders & Variational Autoencoders (VAEs)  
+
+<h5>Week 2: Gen AI & Generative Adversarial Networks (GANs)</h5>  
+Day 1: Implementing a Variational Autoencoder (VAE)  
+Day 2: Introduction to GANs  
+Day 3: Implementing a Simple GAN  
+Day 4: Exploring Advanced GANs (DCGAN, CycleGAN, StyleGAN)  
+Day 5: Transformer Architecture & Self-Attention  
+
+<h5>Week 3: Large Language Models & Transformers, Diffusion Models & Image Generation</h5>  
+Day 1: Introduction to GPT & BERT  
+Day 2: Fine-Tuning GPT-2 for Text Generation  
+Day 3: Understanding Diffusion Models  
+Day 4: Implementing Stable Diffusion  
+Day 5: Improving AI Art with Style Transfer  
+
+<h5>Week 4: Multimodal AI & Creative AI, Foundations of Web Development & Design</h5>  
+Day 1: Introduction to Multimodal Models  
+Day 2: Hands-on with CLIP for Image-Text Retrieval  
+Day 3: AI Music & Art Generation  
+Day 4: Basics of Frontend & Useful Tools in AI, Backend Code & How to Save a Model  
+Day 5: Connectivity and Deployment  
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="4 Weeks" data-frequency="5 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.30">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(3).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-2-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Python FullStack Development</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="Python Full Stack Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in full-stack web development using Python, covering frontend, backend, and database management."
+                                    data-syllabus="<h5>Week 1: Introduction to Web Development & Python Basics</h5>  
+Day 1: Introduction to Web Development & Setup  
+Day 2: Introduction to UI/UX Designing (Figma)  
+Day 3: Git & GitHub  
+
+<h5>Week 2: HTML, CSS, and Bootstrap</h5>  
+Day 1: HTML Basics  
+Day 2: CSS Basics & Responsive Design  
+Day 3: Bootstrap Basics  
+
+<h5>Week 3: JavaScript & DOM Manipulation</h5>  
+Day 1: JavaScript Basics  
+Day 2: Control Flow & Events  
+Day 3: DOM Manipulation  
+
+<h5>Week 4: Basics to Python</h5>  
+Day 1: Introduction to Python  
+Day 2: Functions, Loops, and Statements in Python  
+Day 3: Python Data Structures  
+
+<h5>Week 5: Introduction to SQL</h5>  
+Day 1: Introduction to SQL  
+Day 2: SQL Tables and Relationships  
+Day 3: SQL and NoSQL  
+
+<h5>Week 6: Introduction to Django & Backend Development</h5>  
+Day 1: Introduction to Django  
+Day 2: Django Models and Migrations  
+Day 3: Django Admin Panel & Basic CRUD Operations  
+
+<h5>Week 7: Django Views, Templates & Forms</h5>  
+Day 1: Django Views and Templates  
+Day 2: Django Forms, User Input & User Validations  
+Day 3: Static and Media Files in Django  
+
+<h5>Week 8: Deployment & Final Project</h5>  
+Day 1: Project Development  
+Day 2: Deployment Basics  
+Day 3: Advanced Django & Next Steps  
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="8 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.30">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(2).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-2-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Java FullStack Development</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="Java Full Stack Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Complete roadmap for Java Full Stack Development, covering frontend, backend, and database management."
+                                    data-syllabus="<h5>Week 1: Java Fundamentals & OOP</h5>  
+Day 1: Java Basics  
+Day 2: Object-Oriented Programming (OOP)  
+Day 3: Java Collections & Exception Handling & Git and GitHub  
+
+<h5>Week 2: File Handling & SQL Basics</h5>  
+Day 1: File Handling in Java  
+Day 2: SQL Basics (MySQL)  
+Day 3: JDBC in Java  
+
+<h5>Week 3: Spring Boot Basics & REST API</h5>  
+Day 1: Introduction to Spring Boot  
+Day 2: REST API Development  
+Day 3: Connecting Spring Boot with SQL Database  
+
+<h5>Week 4: API Security & Deployment</h5>  
+Day 1: Authentication Basics  
+Day 2: Exception Handling & API Validations  
+Day 3: Deploying Spring Boot API  
+
+<h5>Week 5: HTML, CSS, JavaScript Basics</h5>  
+Day 1: HTML & CSS Basics  
+Day 2: JavaScript Basics  
+Day 3: Figma Basics for UI Design  
+
+<h5>Week 6: React Basics</h5>  
+Day 1: Introduction to React  
+Day 2: React Hooks  
+Day 3: Fetching Data in React  
+
+<h5>Week 7: Full-Stack Integration</h5>  
+Day 1: Connecting React with Spring Boot API  
+Day 2: Handling Forms & State Management  
+Day 3: API Error Handling & Response Management  
+
+<h5>Week 8: Deployment</h5>  
+Day 1: Deploying  
+Day 2: Debugging & Fixing Issues  
+Day 3: Portfolio Setup  
+
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="8 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <!-- Service Item 3 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.45">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(3).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-3-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">MERN Stack Development</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="MERN Full Stack Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in MERN Stack development covering frontend, backend, database management, and API integration."
+                                    data-syllabus="<h5>Week 1: Introduction to MERN & Frontend Basics</h5>  
+Day 1: Introduction to MERN Stack & Development Setup  
+Day 2: Git & GitHub and Figma Basics  
+Day 3: HTML Basics  
+
+<h5>Week 2: CSS & Bootstrap</h5>  
+Day 1: CSS Basics  
+Day 2: Layout & Responsive Design  
+Day 3: Bootstrap Basics  
+
+<h5>Week 3: JavaScript & DOM Manipulation</h5>  
+Day 1: JavaScript Basics  
+Day 2: Control Flow & Data Handling  
+Day 3: DOM Manipulation  
+
+<h5>Week 4: Advanced JavaScript & API Integration</h5>  
+Day 1: ES6 Features  
+Day 2: Asynchronous JavaScript  
+Day 3: API Integration  
+
+<h5>Week 5: React.js Basics</h5>  
+Day 1: React Fundamentals  
+Day 2: State & Props  
+Day 3: Forms & Validation  
+
+<h5>Week 6: API Integration in React</h5>  
+Day 1: React Router  
+Day 2: Fetching Data  
+Day 3: Error Handling & State Management  
+
+<h5>Week 7: Node.js & Express.js</h5>  
+Day 1: Node.js Basics  
+Day 2: Express.js Basics  
+Day 3: Middleware & CRUD Operations  
+
+<h5>Week 8: MongoDB & Full-Stack Integration</h5>  
+Day 1: MongoDB Basics  
+Day 2: Full-Stack Integration  
+Day 3: Authentication & Deployment  
+
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="8 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-222(4).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-1-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Meanstack Development</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="MEAN Full Stack Development Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in MEAN Stack development covering frontend, backend, database management, and API integration."
+                                    data-syllabus="<h5>Week 1: Introduction to Data Analysis</h5>  
+Day 1: Introduction to Data Analysis & Setup  
+Day 2: Data Collection & Cleaning, Git and GitHub  
+Day 3: Exploratory Data Analysis (EDA)  
+
+<h5>Week 2: Python & SQL for Data Analysis</h5>  
+Day 1: Python Basics for Data Analytics  
+Day 2: Data Manipulation with Pandas  
+Day 3: SQL for Data Analysis  
+
+<h5>Week 3: Advanced Data Processing & Machine Learning Basics</h5>  
+Day 1: Feature Engineering  
+Day 2: Regression & Classification  
+Day 3: Clustering & Dimensionality Reduction  
+
+<h5>Week 4: Business Intelligence & Capstone Project</h5>  
+Day 1: Data Storytelling & Dashboarding  
+Day 2: Capstone Project - Data Analysis & Insights  
+Day 3: Deployment & Presentation  
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="8 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.15">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(4).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-1-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Data Analysis</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="Data Analysis Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in data analysis covering data collection, cleaning, visualization, and machine learning basics."
+                                    data-syllabus="<h5>Week 1: Introduction to Data Analysis</h5>  
+Day 1: Introduction to Data Analysis & Setup  
+Day 2: Data Collection & Cleaning, Git and GitHub  
+Day 3: Exploratory Data Analysis (EDA)  
+
+<h5>Week 2: Python & SQL for Data Analysis</h5>  
+Day 1: Python Basics for Data Analytics  
+Day 2: Data Manipulation with Pandas  
+Day 3: SQL for Data Analysis  
+
+<h5>Week 3: Advanced Data Processing & Machine Learning Basics</h5>  
+Day 1: Feature Engineering  
+Day 2: Regression & Classification  
+Day 3: Clustering & Dimensionality Reduction  
+
+<h5>Week 4: Business Intelligence & Capstone Project</h5>  
+Day 1: Data Storytelling & Dashboarding  
+Day 2: Capstone Project - Data Analysis & Insights  
+Day 3: Deployment & Presentation  
+" data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="4 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                            <!-- Service Item 4 -->
+                            <div class="service-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="5000"
+                                data-aos-once="true" data-delay="0.60">
+                                <div class="icon">
+                                    <img class="show-light" src="{% static 'assets/imgs/shape/img-s-223(3).png' %}" alt="service-icon">
+                                    <img class="show-dark" src="{% static 'assets/imgs/icon/icon-s-4-light.webp' %}"
+                                        alt="service-icon">
+                                </div>
+                                <h2 class="title icons">Ui &amp; Ux</h2>
+                                <a class="wc-btn wc-btn-underline " data-title="UI/UX Design Course"
+                                    data-company="Altruisty Innovation Private Limited"
+                                    data-description="Comprehensive training in UI/UX design covering user research, wireframing, prototyping, and usability testing using Figma and Adobe XD."
+                                    data-syllabus="<h5>Week 1: UI/UX Basics & Wireframing</h5>  
+Day 1: Introduction to UI/UX Design + Understanding UI vs. UX  
+Day 2: Design Thinking & User Research (Personas, User Journeys)  
+Day 3: Low-Fidelity Wireframing (Sketching & Digital Wireframes)  
+
+<h5>Week 2: UI Design Fundamentals</h5>  
+Day 1: Visual Hierarchy & Layout Principles  
+Day 2: Typography & Color Theory Basics (Accessibility Focus)  
+Day 3: High-Fidelity Wireframing & Design Refinement  
+
+<h5>Week 3: Prototyping & Interaction Design</h5>  
+Day 1: UI Components (Buttons, Forms, Cards, Icons)  
+Day 2: Clickable Prototypes & Navigation Flows in Figma  
+Day 3: Microinteractions & UI Feedback (Hover, Click Effects)  
+
+<h5>Week 4: Responsive UI & Portfolio Building</h5>  
+Day 1: Designing for Mobile, Tablet, and Web (Grid Systems)  
+Day 2: Hands-on UI/UX Case Study  
+Day 3: Behance Upload  " data-fee="₹1000 (Up to 70% off with valid promotional coupons) for Coupons contact : 8667839838"
+                                    data-duration="4 Weeks" data-frequency="3 sessions per week" data-mode="Online"
+                                    data-certification="E-certificate upon completion, hard copy available for ₹100"
+                                    data-contactEmail="altruisty.training.head@gmail.com" data-contactPhone="8667839838"
+                                    data-website="https://altruisty.in" onclick="showCourseDetails(this)">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <style>
+                .popup-html {
+                    margin-top: 10vh;
+
+                    width: fit-content;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    font-family: Arial, sans-serif;
+                    overflow: scroll;
+                    height: 70vh;
+                }
+
+                .popup-html .row {
+                    width: fit-content;
+                }
+
+                .popup-html .row .col,
+                .popup-html .row .col-md {
+
+                    width: fit-content;
+                }
+
+                .popup-html table {
+                    border-collapse: collapse;
+                    width: fit-content;
+
+
+                }
+
+                .popup-html td,
+                th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+
+                }
+
+                .popup-html th {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color: rgba(76, 175, 80, 0.7);
+                    color: white;
+
+                }
+
+                .popup-html tr:nth-child(even) {
+                    background-color: rgba(242, 242, 242, 0.7);
+                }
+
+                .popup-html tr:hover {
+                    background-color: rgba(221, 221, 221, 0.7);
+                }
+
+                .popup-html td.table-label {
+                    font-weight: bold;
+                }
+
+                .popup-html td.table-value {
+                    white-space: pre-wrap;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    .popup-html {
+                        min-height: fit-content;
+                        width: 400px;
+                    }
+
+                    .popup-html table {
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    .popup-html .row {
+                        height: 100%;
+                    }
+
+                    .popup-html td,
+                    th {
+                        padding: 6px;
+                    }
+
+                    .popup-html table {
+                        font-size: 12px;
+                    }
+                }
+            </style>
+            <script>
+                function showCourseDetails(element) {
+                    let popupContent = `
+    <div class="popup-html" data-aos="zoom-in" >
+        <h2 style="text-align: center; margin-bottom: 15px; font-size: 1.2em;">${element.dataset.title}</h2>
+            <div class="row">
+                <div class=col>
+                    <table>
+                
+                    
+                    <tr><td class="table-label"><strong>Description:</strong></td><td class="table-value">${element.dataset.description}</td></tr>
+                    <tr><td class="table-label"><strong>Course Fee:</strong></td><td class="table-value">${element.dataset.fee}</td></tr>
+                    <tr><td class="table-label"><strong>Special Educational Assistance:</strong></td><td class="table-value">80% or higher tuition relief for Persons with 
+- Disabilities
+- Single-Parented Individuals
+- Orphaned Individuals
+- Economically Disadvantaged Individuals
+- Medically Dependent Individuals
+- Socially Vulnerable Individuals
+- Children from Foster Care
+- Underprivileged Students</td></tr>
+                    <tr><td class="table-label"><strong>Duration:</strong></td><td class="table-value">${element.dataset.duration}</td></tr>
+                    <tr><td class="table-label"><strong>Sessions:</strong></td><td class="table-value">${element.dataset.frequency}</td></tr>
+                    <tr><td class="table-label"><strong>Mode:</strong></td><td class="table-value">${element.dataset.mode}</td></tr>
+                    <tr><td class="table-label"><strong>Certification:</strong></td><td class="table-value">${element.dataset.certification}</td></tr>
+                    <tr><td class="table-label"><strong>Contact:</strong></td><td class="table-value"> 8667839838, altruisty.training.head@gmail.com</td></tr>
+                    <tr><td class="table-label"><strong>Syllabus:</strong></td><td class="table-value" style="font-size="10px">${element.dataset.syllabus}</td></tr>
+                    </table>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button onclick="closePopup(); document.getElementById('dform').scrollIntoView({behavior: 'smooth'});" style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+                           Register Now
+                        </button>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button onclick="closePopup()" style="background-color: black; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">
+                            Close
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+`;
+
+
+
+                    let popup = document.createElement("div");
+                    popup.id = "coursePopup";
+                    popup.innerHTML = popupContent;
+                    popup.style.position = "fixed";
+                    popup.style.top = "50%";
+                    popup.style.left = "50%";
+                    popup.style.transform = "translate(-50%, -50%)";
+                    popup.style.background = "#fff";
+                    popup.style.padding = "20px";
+                    popup.style.borderRadius = "10px";
+                    popup.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
+                    popup.style.zIndex = "1000";
+                    document.body.appendChild(popup);
+                }
+
+                function closePopup() {
+                    document.getElementById("coursePopup").remove();
+                }
+            </script>
+
+        </div>
+
+        <div class="section-heading mt-5  pb-3 col-12 d-flex justify-content-center">
+            <h2 class="section-title" data-aos="fade-right" data-aos-delay="50" data-aos-duration="5000"
+                data-aos-once="true">Join with us to Explore</h2>
+        </div>
+
+        <section class="">
+            <div class="container-large mt-1 pb-3">
+                <div class="abody">
+                    <div class="wrapper">
+                        <h1>Intern Registration</h1>
+                        {% comment %} <form method="POST"
+                            action="https://script.google.com/macros/s/AKfycbxvXGrsRwGrXLB085-51ebEBfcMuGWgt2WQ66g7plS2hrxwsXKXB6Mwggzhwzo5qh7B/exec"
+                            id="dform">
+                            <!-- {% csrf_token %} -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xl-12 d-md-flex justify-content-evenly ">
+                                        <div class="col-12 col-md-3">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentname">
+                                                <label>name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentage">
+                                                <label>age</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdob">
+                                                <label>Date of Birth</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="email" required name="studentemail">
+                                                <label>email</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="tel" required name="studentphone">
+                                                <label>phone number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentclg">
+                                                <label>college name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdept">
+                                                <label>Dept</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcurrentyear">
+                                                <label>Current year in college</label>
+                                            </div>
+
+                                            <div class="input-field ">
+                                                <input type="text" required name="studentgradyear">
+                                                <label class="">Graduation year</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentskills" rows="3" />
+                                                <label>Skills</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="address" rows="3" />
+                                                <label>address</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcity">
+                                                <label>city</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentstate">
+                                                <label>state</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcountry">
+                                                <label>country</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="pincode">
+                                                <label> pin code</label>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-12 d-md-flex justify-content-evenly mt-2">
+                                        <div class="col-md-5 col-12">
+
+                                            <label for="domain" class="">Domain</label>
+
+                                            <div class="input-field">
+
+                                                <select name="domain" class="form-control">
+                                                    <option value="Web Development">Web Development</option>
+                                                    <option value="App Development">App Development</option>
+                                                    <option value="Generative AI">Generative AI</option>
+                                                    <option value="Python Full-Stack Development">Python Full-Stack
+                                                        Development</option>
+                                                    <option value="Java Full-Stack Development">Java Full-Stack
+                                                        Development</option>
+                                                    <option value="MERN Stack Development">MERN Stack Development
+                                                    </option>
+                                                    <option value="MEAN Stack Development">MEAN Stack Development
+                                                    </option>
+                                                    <option value="Data Analysis">Data Analysis</option>
+                                                    <option value="UI & UX">UI & UX</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 col-12">
+                                            <label for="duration">Duration</label>
+
+                                            <div class="input-field">
+
+                                                <select name="duration" class="form-control">
+                                                    <option value="1 month">1 month</option>
+                                                    <option value="3 months">3 months</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-md-flex  justify-content-evenly  ">
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentlp" rows="3" />
+                                            <label>Linked in profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentgp">
+                                            <label>Github profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="resumeurl">
+                                            <label>Resume Link</label>
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-3 btn-wrapper has_fade_anim" id="forms" data-fade-from="left"
+                                data-duration="0.75" data-delay="0.60" data-on-scroll="0">
+                                <input type="submit" value="submit"
+                                    class="wc-btn wc-btn-primary btn-text-flip ai-fill-btn" />
+
+
+                            </div>
+
+
+
+                        </form> {% endcomment %}
+                        <form method="POST" action="https://script.google.com/macros/s/AKfycbxvXGrsRwGrXLB085-51ebEBfcMuGWgt2WQ66g7plS2hrxwsXKXB6Mwggzhwzo5qh7B/exec" id="dform">
+                            {% csrf_token  %}
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-12 col-xl-12 d-md-flex justify-content-evenly ">
+                                        <div class="col-12 col-md-3">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentname">
+                                                <label>name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentage">
+                                                <label>age</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdob">
+                                                <label>Date of Birth</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="email" required name="studentemail">
+                                                <label>email</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="tel" required name="studentphone">
+                                                <label>phone number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="studentclg">
+                                                <label>college name</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentdept">
+                                                <label>Dept</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcurrentyear">
+                                                <label>Current year in college</label>
+                                            </div>
+
+                                            <div class="input-field ">
+                                                <input type="text" required name="studentgradyear">
+                                                <label class="">Graduation year</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentskills" rows="3" />
+                                                <label>Skills</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-12 ">
+                                            <div class="input-field">
+                                                <input type="text" required name="address" rows="3" />
+                                                <label>address</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcity">
+                                                <label>city</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentstate">
+                                                <label>state</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="studentcountry">
+                                                <label>country</label>
+                                            </div>
+
+                                            <div class="input-field">
+                                                <input type="text" required name="pincode">
+                                                <label> pin code</label>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-12 d-md-flex justify-content-evenly mt-2">
+                                        <div class="col-md-12 col-12">
+
+                                            <label for="domain" class="">Domain and Duration</label>
+
+                                            <div class="input-field">
+
+                                                <select name="domain_duration" class="form-control">
+                                                    <option value="Web Development-1month">Web Development - 1 month</option>
+                                                    <option value="IOT-1month">IOT - 1 month</option>
+                                                    <option value="UI&UX-1month">UI&UX - 1 month</option>
+                                                    <option value="Gen-AI-1month">Gen-AI-1month</option>
+                                                    <option value="Data Analytics-1month">Data Analytics - 1 month</option>
+                                                    <option value="Mern Full Stack Development-2month">Mern Full Stack Development-2month</option>
+                                                    <option value="Mean Full Stack Development-2month">Mean Full Stack Development-2month</option>
+                                                    <option value="Python Full Stack Development-2month">Python Full Stack Development-2month</option>
+                                                    <option value="Java Full Stack Development-2month">Java Full Stack Development-2month</option>
+                                                    <option value="App Development-2month">App Development-2month</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-md-flex  justify-content-evenly  ">
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentlp" rows="3" />
+                                            <label>Linked in profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="studentgp">
+                                            <label>Github profile</label>
+                                        </div>
+
+                                        <div class="input-field col-md-3 col-12 ">
+                                            <input type="text" required name="resumeurl">
+                                            <label>Resume Link</label>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="input-field ">
+                                        <input type='text' required name="studentreason"  />
+                                        <label>Why we need to hire you</label>
+                                    </div>
+                                    <div class="col-12 d-md-flex  justify-content-evenly ">
+                                        <div class="input-field col-md-12 col-12">
+                                            <input type='text' placeholder="only if provided" name="coupon"  id="couponInput" />
+                                            <label>Coupon code</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="input-field ">
+                                        <input type='text' required name="transaction_id" />
+                                        <label>Transaction id</label>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-3 btn-wrapper has_fade_anim" id="forms" data-fade-from="left" data-duration="0.75" data-delay="0.60"
+                                 data-on-scroll="0">
+                                 <button class="wc-btn wc-btn-primary col-6" type="button" id="viewQRButton">pay here</button>
+                                <input type="submit" value="submit" class="wc-btn wc-btn-primary btn-text-flip ai-fill-btn" />
+
+
+                            </div>
+
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="qrPopup">
+            <h1 style="color:#f9f9f9">amount to pay</h1>
+            <p style="color:#f9f9f9" id="amount"></p>
+            <img id="qrImage" src="" alt="QR Code" />
+            <button id="closeQRPopup">Close</button>
+        </div>
+    </main>
+    <div class="overlay-switcher-close"></div>
+
+
+
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/backToTop.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/error-handling.js' %}"></script>
+    <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+    <script>
+
+
+        const url = "https://script.google.com/macros/s/AKfycbx9AHMN5-Y_tTlF3UiihWN_932S2wJXrwovA71yiHKQlDb7JrOe6fMH002IwF3rSvem/exec"
+        const form = document.forms['dform']
+        await form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(url, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("thank you"))
+
+                .catch(error => console.error("error"))
+        });
+
+
+
+    </script>
+    <script>
+        document.getElementById("viewQRButton").addEventListener("click", function() {
+            let couponValue = document.getElementById("couponInput").value.trim();
+            if (couponValue == "ARTPI500") {
+                let qrImage = document.getElementById("qrImage");
+                let amount = document.getElementById("amount");
+                amount.innerText = 500
+                qrImage.src = "{% static 'assets/upi_500.png' %}";  // Adjust the image path as needed
+                document.getElementById("qrPopup").style.display = "block";
+            }else if(couponValue == "ARTPI600"){
+                let qrImage = document.getElementById("qrImage");
+                let amount = document.getElementById("amount");
+                amount.innerText = 400
+                qrImage.src = "{% static 'assets/upi_400.png' %}";  // Adjust the image path as needed
+                document.getElementById("qrPopup").style.display = "block";
+            } 
+            else if(couponValue == "ARTPI700"){
+                let qrImage = document.getElementById("qrImage");
+                let amount = document.getElementById("amount");
+                amount.innerText = 300
+                qrImage.src = "{% static 'assets/upi_300.png' %}";  // Adjust the image path as needed
+                document.getElementById("qrPopup").style.display = "block";
+            } 
+            else {
+                let qrImage = document.getElementById("qrImage");
+                let amount = document.getElementById("amount");
+                amount.innerText = 1000
+                qrImage.src = "{% static 'assets/upi_qr1000.png' %}";  // Adjust the image path as needed
+                document.getElementById("qrPopup").style.display = "block";
+            }
+        });
+    
+        document.getElementById("closeQRPopup").addEventListener("click", function() {
+            document.getElementById("qrPopup").style.display = "none";
+        });
+    </script>
+    <script>
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 110,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+        // project slider
+        if (('.project-slider').length) {
+            var project_slider = new Swiper(".project-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 40,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".project-button-prev",
+                    nextEl: ".project-button-next",
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    type: 'bullets',
+                    clickable: true
+                },
+                breakpoints: {
+                    // when window width is >= px
+                    576: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1201: {
+                        slidesPerView: 3,
+                    },
+                    1367: {
+                        slidesPerView: 4,
+                    },
+                }
+            });
+        }
+
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // text slider
+        if ('.text-slider-active') {
+            var text_slider_active = new Swiper(".text-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 30,
+                speed: 10000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+
+</html>

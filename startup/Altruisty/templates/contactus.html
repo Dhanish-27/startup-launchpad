@@ -1,0 +1,481 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Oct 2024 13:56:59 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arolax HTML5 Template">
+
+    <title>Altruisty</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.jpg' %}">
+
+
+
+
+
+    <!-- All CSS files -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/master-contact.css' %}">
+
+
+</head>
+
+
+<body class="font-heading-beatricetrial-regular-2">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text="A" class="characters">A</span>
+                    <span data-text="L" class="characters">L</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="R" class="characters">R</span>
+                    <span data-text="U" class="characters">U</span>
+                    <span data-text="I" class="characters">I</span>
+                    <span data-text="S" class="characters">S</span>
+                    <span data-text="T" class="characters">T</span>
+                    <span data-text="Y" class="characters">Y</span>
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+
+    <!-- Cursor Animation -->
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <!-- Sroll to top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- Switcher Area Start -->
+    <!-- Switcher Area End -->
+    <!-- offcanvas start  -->
+    <div class="offcanvas-3__area">
+        <div class="offcanvas-3__inner">
+            <div class="offcanvas-3__meta-wrapper">
+                <div class="">
+                    <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="">
+                    <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+                        <ul>
+                            <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
+                            <li><a href="mailto:contact@me.com">contact@me.com</a></li>
+                            <li>
+                                <a href="#">
+                                    27 Division St, <br>
+                                    New York, NY 10002, USA
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-3__social d-none d-md-block">
+                        <p class="title">Follow Me</p>
+                        <div class="offcanvas-3__social-links">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-3__menu-wrapper">
+                <nav class="nav-menu offcanvas-3__menu">
+                    <ul>
+                        <li><a href="{% url 'altruisty:index' %}">home</a></li>
+                        <li><a href="{% url 'altruisty:about' %}">about</a></li>
+                        <li><a href="{% url 'altruisty:services' %}">services</a></li>
+                        <li><a href="{% url 'altruisty:E-learning' %}">E-learning registration</a></li>
+                        <li><a href="{% url 'altruisty:Mentorform' %}">Mentor registration</a></li>
+                        <li><a href="{% url 'altruisty:Startupform' %}">Startup registration</a></li>
+                        <li><a href="{% url 'altruisty:CollegeForm' %}">College registration</a></li>
+                        <li><a href="{% url 'altruisty:intern' %}">Internship</a></li>
+                        <li><a href="{% url 'altruisty:verify' %}">View internship</a></li>
+                        <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas end  -->
+    <!-- search modal start -->
+    <div class="modal fade" id="search-template" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="search-template" aria-hidden="true">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" class="form-search">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search modal end -->
+    <!-- Header area start -->
+    <header class="header-area">
+        <div class="container large">
+            <div class="header-area__inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="show-light" src="{% static 'assets/imgs/logo/logo.png' %}" alt="Site Logo">
+
+                    </a>
+                </div>
+                <div class="header__nav pos-center">
+                    <nav class="main-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'altruisty:index' %}">Home</a>
+                            </li>
+                            <li><a href="{% url 'altruisty:about' %}">About</a></li>
+                            <!--<li class="a">
+        <a href="#">portfolio</a>
+        <ul class="dp-menu">
+            <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
+            <li><a href="portfolio-material.html">Portfolio Material</a></li>
+            <li><a href="portfolio-slicer.html">Portfolio Slicer</a></li>
+            <li><a href="portfolio-spring.html">Portfolio Spring</a></li>
+        </ul>
+    </li>-->
+                            <li>
+                                <a href="{% url 'altruisty:services' %}">Services</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Registration</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:E-learning' %}">E-learning Platform Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Mentorform' %}">Mentor Registration</a></li>
+                                    <li><a href="{% url 'altruisty:Startupform' %}">Startup Registration</a></li>
+                                    <li><a href="{% url 'altruisty:CollegeForm' %}">College Registration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Internship</a>
+                                <ul class="dp-menu">
+                                    <li><a href="{% url 'altruisty:intern' %}">Intern Registration</a></li>
+                                    <li><a href="{% url 'altruisty:verify' %}">Intern Verification</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'altruisty:contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <a class="wc-btn wc-btn-primary btn-text-flip" href="contact.html">
+                        <span data-text="Get started">
+                            Login
+                        </span>
+                    </a>
+                </div>
+                <div class="header__navicon d-xl-none">
+                    <button onclick="showCanvas3()" class="open-offcanvas">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <div class="has-smooth" id="has_smooth"></div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="body-wrapper body-corporate-agency">
+
+                <!-- overlay switcher close  -->
+                <div class="overlay-switcher-close"></div>
+
+                <main>
+
+                    <!-- hero area start  -->
+                    <section class="hero-area">
+                        <div class="container">
+                            <div class="hero-area-inner">
+                                <div class="section-content">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h1 class="section-title large has_fade_anim">Get In<br>Touch With<br> Altruisty!</h1>
+
+                                            <div class="desp mt-4">We're here to help with your questions or collaborations.<br> Let's create something great together!</div>
+
+
+                                            <div class="desp1 mt-4">
+                                                At Altruisty, we’re passionate about empowering individuals with the skills and support they need to succeed in their entrepreneurial journeys. Whether you’re looking for resources to build your skills, interested in our programs, or have ideas on how we can collaborate, we’d love to hear from you!
+                                            </div>
+
+                                            <div class="desp1 mt-4">
+                                                Access to Expert Guidance
+                                            </div>
+
+                                            <div class="desp1 mt-2">
+                                                Explore Collaboration Opportunities
+                                            </div>
+
+                                            <div class="desp1 mt-2">
+                                                Stay Updated on Programs & Events
+                                            </div>
+
+                                            <div class="desp1 mt-2">
+                                                Join a Growing Community
+                                            </div>
+                                            <div class="desp1 mt-4">
+                                                Start your journey with us today! By contacting Altruisty, you’re joining a movement dedicated to empowerment, innovation, and entrepreneurship. Let’s create something extraordinary together.
+                                            </div>
+                                            </div>
+                                        </div>
+                                    <div class="content-last">
+                                        <div class="col-first">
+                                            <div class="image-box overflow-hidden">
+                                                <img src="{% static 'assets/imgs/gallery/office3.jpg' %}" data-speed="0.9" alt="image">
+                                            </div>
+                                            <div class="col-first">
+                                                <div class="image-box overflow-hidden">
+                                                    <img src="{% static 'assets/imgs/gallery/office10.jpg' %}" alt="shape">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-second">
+                                            <div class="image-box">
+                                                <img src="{% static 'assets/imgs/gallery/office7-1.jpg' %}" alt="image">
+                                            </div>
+                                            <div class="image-box overflow-hidden">
+                                                <img src="{% static 'assets/imgs/gallery/Avengers1.jpeg' %}" data-speed="0.9" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="image-wrapper overflow-hidden">
+                        <img class="w-100" src="{% static 'assets/imgs/gallery/office8.jpg' %}" data-speed="0.9" alt="image">
+                    </div>
+
+                    <!-- hero area end  -->
+                    <!-- contact area start  -->
+                    <section class="contact-area">
+                        <div class="container">
+                            <div class="contact-area-inner section-spacing">
+                                <div class="section-header">
+                                    <div class="section-title-wrapper">
+                                        <div class="title-wrapper">
+                                            <h1 class="section-title large has_fade_anim">
+                                                Connect with us!
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="section-content">
+                                    <div class="info-box has_fade_anim">
+                                        <div class="text-wrapper">
+
+                                        </div>
+                                        <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15877.504112085335!2d80.26922415986526!3d13.007745188447323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267f01a2431d7%3A0xec044ecf0aac42cc!2s1st%20Cross%20St%2C%20Besant%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600090%2C%20India!5e0!3m2!1sen!2sus!4v1728671590996!5m2!1sen!2sus" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                                    </div>
+                                    <div class="contact-wrap has_fade_anim" data-delay="0.30">
+                                        <form action="#">
+                                            <div class="contact-formwrap">
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="FisrtName" id="FisrtName" placeholder="Fisrt Name*">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="LastName" id="LastName" placeholder="Last Name*">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="Phone" id="Phone" placeholder="Phone*">
+                                                </div>
+                                                <div class="contact-formfield">
+                                                    <input type="text" name="email" id="email" placeholder="E-mail*">
+                                                </div>
+                                                <div class="contact-formfield messages">
+                                                    <input type="text" name="serviceopt" id="serviceopt" placeholder="Service Opted*">
+                                                </div>
+                                                <div class="contact-formfield messages">
+                                                    <input type="text" name="Messages" id="Messages" placeholder="Messages*">
+                                                </div>
+                                            </div>
+                                            <div class="submit-btn">
+                                                <button type="submit" class="wc-btn wc-btn-primary btn-text-flip">
+                                                    <span data-text="Send Message">Send Message</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- contact area end  -->
+
+                </main>
+
+                <!-- footer area start  -->
+                <footer class="footer-area">
+                    <div class="container">
+                        <div class="footer-area-inner section-spacing-top">
+                            <div class="shape-1">
+                                <img class="show-light" src="{% static 'assets/imgs/shape/img-s-33.webp' %}" alt="shape">
+                                <img class="show-dark" src="assets/imgs/shape/img-s-33-light.webp" alt="shape">
+                            </div>
+                            <div class="section-header">
+                                <div class="section-title-wrapper">
+                                    <div class="title-wrapper">
+                                        <h2 class="section-title has_fade_anim">
+                                            <span>Get started</span> <br>
+                                            now!
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="text-wrapper">
+                                    <p class="text has_fade_anim">
+                                        Whether you're looking to collaborate or simply want to reach out, we'd love to hear from you!
+                                        to hear from you!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="footer-cta">
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">Address</h2>
+                                    <ul class="footer-nav-list">
+                                        <li>
+                                            16, 12, 2nd St Rd, Urrur Kuppam,
+                                            Besant Nagar, Chennai, Tamil Nadu 600090
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">Contact</h2>
+                                    <ul class="footer-nav-list">
+                                        <li>+91 8667839838</li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">E-mail</h2>
+                                    <ul class="footer-nav-list">
+                                        <li><a href="mailto:altruistybusiness@gmail.com">altruistybusiness@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-widget-wrapper">
+                                    <h2 class="title">Linked in</h2>
+                                    <ul class="footer-nav-list">
+                                        <li><a href="https://www.linkedin.com/company/altruisty/">Altruisty/linkedin</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area">
+                        <div class="container">
+                            <div class="copyright-area-inner">
+                                <div class="copyright-text">
+                                    <p class="text">
+                                        &#169 2022 - 2025 | Alrights reserved <br>
+                                        by <a href="https://themeforest.net/user/crowdytheme" target="_blank">Altruisty</a>
+                                    </p>
+                                </div>
+                                <ul class="footer-nav-list">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer area end  -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- All JS files -->
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/progressbar.js' %}"></script>
+    <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/backToTop.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/error-handling.js' %}"></script>
+    <script src="{% static 'assets/js/offcanvas.js' %}"></script>
+
+    <script>
+
+        // testimonial slider
+        if (('.testimonial-slider').length) {
+            var testimonial_slider = new Swiper(".testimonial-slider", {
+                loop: false,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 1800,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: ".testimonial-button-prev",
+                    nextEl: ".testimonial-button-next",
+                },
+            });
+        }
+
+
+        // client slider
+        if ('.client-slider-active') {
+            var client_slider_active = new Swiper(".client-slider-active", {
+                slidesPerView: 'auto',
+                loop: true,
+                autoplay: true,
+                spaceBetween: 130,
+                speed: 3000,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from crowdytheme.com/html/arolax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Oct 2024 13:57:01 GMT -->
+</html>

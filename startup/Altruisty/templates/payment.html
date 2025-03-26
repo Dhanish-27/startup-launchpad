@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment QR Code</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .left, .right {
+            width: 48%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .left:hover, .right:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin: 10px 5px;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(65, 132, 234, 0.4);
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+            transition: all 0.4s ease-in-out;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            left: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(65, 132, 234, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(72, 129, 235, 0.2);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s infinite linear;
+            background-size: 200% 100%;
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left, .right {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        /* Form styling */
+        form {
+            margin-top: 20px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+            text-align: left;
+        }
+        
+        form input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        form input[type="text"]:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        form input[type="file"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #f8fafc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        form input[type="file"]:hover {
+            border-color: #a0aec0;
+        }
+        
+        /* Amount display */
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        /* QR Code image container */
+        .qr-container {
+            margin: 30px auto;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qr-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Error message styling */
+        .error-message {
+            color: #e74c3c;
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            text-align: left;
+        }
+        
+        /* Create static particles */
+        .particle:nth-child(1) { width: 15px; height: 15px; top: 10%; left: 20%; opacity: 0.5; animation-duration: 18s; }
+        .particle:nth-child(2) { width: 12px; height: 12px; top: 30%; left: 40%; opacity: 0.3; animation-duration: 20s; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 18px; height: 18px; top: 60%; left: 10%; opacity: 0.4; animation-duration: 15s; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 10px; height: 10px; top: 20%; left: 70%; opacity: 0.6; animation-duration: 22s; animation-delay: 3s; }
+        .particle:nth-child(5) { width: 14px; height: 14px; top: 50%; left: 80%; opacity: 0.5; animation-duration: 17s; animation-delay: 4s; }
+        .particle:nth-child(6) { width: 13px; height: 13px; top: 85%; left: 25%; opacity: 0.4; animation-duration: 19s; animation-delay: 2s; }
+        .particle:nth-child(7) { width: 16px; height: 16px; top: 15%; left: 90%; opacity: 0.3; animation-duration: 21s; animation-delay: 1s; }
+        .particle:nth-child(8) { width: 11px; height: 11px; top: 75%; left: 60%; opacity: 0.5; animation-duration: 16s; animation-delay: 3s; }
+        .particle:nth-child(9) { width: 9px; height: 9px; top: 40%; left: 30%; opacity: 0.4; animation-duration: 23s; animation-delay: 2s; }
+        .particle:nth-child(10) { width: 20px; height: 20px; top: 90%; left: 85%; opacity: 0.2; animation-duration: 25s; animation-delay: 1s; }
+        
+        /* New styles for button container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .button-container .btn {
+            flex: 1;
+            margin: 0 10px;
+            max-width: none;
+        }
+
+        /* Coupon Modal Styles */
+        .coupon-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .coupon-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .coupon-modal {
+            width: 90%;
+            max-width: 450px;
+            background: linear-gradient(to bottom right, #ffffff, #f5f7fa);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .coupon-modal-overlay.active .coupon-modal {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .coupon-modal-title {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .coupon-modal-title:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .coupon-input {
+            margin: 25px 0;
+        }
+        
+        .coupon-input input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .coupon-input input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+        
+        .coupon-input input::placeholder {
+            color: #a0aec0;
+            font-weight: 300;
+        }
+        
+        .coupon-modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .coupon-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(236, 240, 241, 0.5);
+        }
+        
+        .coupon-modal-close:hover {
+            background: rgba(236, 240, 241, 1);
+            transform: rotate(90deg);
+        }
+        
+        .coupon-modal-close:before,
+        .coupon-modal-close:after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: #7f8c8d;
+        }
+        
+        .coupon-modal-close:before {
+            transform: rotate(45deg);
+        }
+        
+        .coupon-modal-close:after {
+            transform: rotate(-45deg);
+        }
+        
+        .coupon-modal-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .coupon-modal-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .coupon-status {
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .coupon-status.error {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+            display: block;
+        }
+        
+        .coupon-status.success {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+            display: block;
+        }
+        
+        .btn-cancel {
+            background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+        }
+        
+        .btn-cancel:before {
+            background: linear-gradient(to right, #fad0c4 0%, #ff9a9e 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <!-- Left Section (QR Code) -->
+        <div class="left">
+            <h2>Scan to Pay</h2>
+            <h3>Total amount: &#8377;{{ amount }}</h3>
+
+            <div class="qr-container">
+                <img src="{% url 'altruisty:upi_qr' price %}" alt="UPI QR Code">
+            </div>
+        </div>
+
+        <!-- Right Section (Payment Details) -->
+        <div class="right">
+            {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "error" %}
+                    <p class="error-message">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+            
+            <!-- Transaction Form -->
+            <form action="{% url 'altruisty:submit_payment' id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="transaction_id">Transaction ID:</label>
+                {{form.transaction_id}}
+
+                <label for="transaction_screenshot">Upload Screenshot:</label>
+                <input type="file" name="transaction_screenshot" id="transaction_screenshot" accept="image/*" required>
+
+                <input type="hidden" name="payment_id" value="{{ id }}">
+                <input type="hidden" name="coupon_code" id="hiddenCouponCode" value="">
+                
+                <!-- Buttons Container -->
+                <div class="button-container">
+                    <button type="button" id="openCouponModal" class="btn">Apply Coupon</button>
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Coupon Modal -->
+    <div class="coupon-modal-overlay" id="couponModalOverlay">
+        <div class="coupon-modal">
+            <button class="coupon-modal-close" id="closeCouponModal">✖</button>
+            <div class="coupon-modal-icon">🎟️</div>
+            <h3 class="coupon-modal-title">Apply Coupon</h3>
+            <p>Enter your coupon code below to get a discount</p>
+            
+            <form action="{% url 'altruisty:coupon_check' id %}" method="POST">
+                {% csrf_token %}
+                <div class="coupon-input">
+                    <input type="text" name="coupon_code" id="couponCode" placeholder="Enter coupon code" autocomplete="off" required>
+                </div>
+    
+                <div id="couponStatus" class="coupon-status"></div>
+    
+                <div class="coupon-modal-buttons">
+                    <button type="submit" class="btn">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript to handle coupon modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const openModalBtn = document.getElementById('openCouponModal');
+            const closeModalBtn = document.getElementById('closeCouponModal');
+            const cancelBtn = document.getElementById('cancelCouponButton');
+            const modalOverlay = document.getElementById('couponModalOverlay');
+    
+            // Open modal
+            openModalBtn.addEventListener('click', function() {
+                modalOverlay.classList.add('active');
+            });
+    
+            // Close modal function
+            function closeModal() {
+                modalOverlay.classList.remove('active');
+            }
+    
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+    
+            // Close when clicking outside the modal
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

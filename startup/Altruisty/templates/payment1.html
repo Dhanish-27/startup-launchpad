@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment QR Code</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .left, .right {
+            width: 50%;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1000;
+        }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .modal input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .btn {
+            padding: 10px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Section (QR Code) -->
+    <div class="left">
+        <h2>Scan to Pay</h2>
+        <h3>Total amount: &#8377;{{ amount }}</h3>
+
+        <img src="{% url 'altruisty:upi_qr' price %}" alt="UPI QR Code">
+    </div>
+
+    <!-- Right Section (Payment Details) -->
+    <div class="right">
+
+
+        <!-- Apply Coupon Button -->
+        <button class="btn" onclick="openCouponModal()">Apply Coupon</button>
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "error" %}
+                <p style="color: red; margin-top: 10px;">{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+        <!-- Transaction Form -->
+        <form action="{% url 'altruisty:submit_payment' id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="transaction_id">Transaction ID:</label>
+            {{form.transaction_id}}
+
+            <label for="transaction_screenshot">Upload Screenshot:</label>
+            <input type="file" name="transaction_screenshot" id="transaction_screenshot" accept="image/*" required>
+
+            <input type="hidden" name="payment_id" value="{{ id }}">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Coupon Modal -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal" id="couponModal">
+    <h3>Apply Coupon</h3>
+
+    <form id="couponForm" method="post" action="{% url 'altruisty:coupon_check' id %}">
+        {% csrf_token %}
+        <input type="text" id="couponCode" name="coupon_code" placeholder="Enter Coupon Code" required>
+        <button class="btn" type="submit">Apply</button>
+        <button class="btn" style="background: red;" type="button" onclick="closeCouponModal()">Close</button>
+    </form>
+
+    <!-- Invalid Coupon Message (Hidden by Default) -->
+    <!-- <p id="couponError" style="color: red; display: none;">Invalid Coupon Code!</p> -->
+</div>
+
+<script>
+    function openCouponModal() {
+        document.getElementById("modalOverlay").style.display = "block";
+        document.getElementById("couponModal").style.display = "block";
+    }
+
+    function closeCouponModal() {
+        document.getElementById("modalOverlay").style.display = "none";
+        document.getElementById("couponModal").style.display = "none";
+    }
+
+    function applyCoupon() {
+        let couponCode = document.getElementById("couponCode").value;
+        if (couponCode.trim() === "") {
+            alert("Please enter a coupon code.");
+            return;
+        }
+        alert("Coupon applied successfully: " + couponCode);
+        closeCouponModal();
+    }
+</script>
+
+</body>
+</html>
